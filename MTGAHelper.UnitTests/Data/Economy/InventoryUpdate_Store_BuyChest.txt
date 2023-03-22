@@ -1,0 +1,54 @@
+{
+      "context": "Store.Fulfillment.Chest",
+      "updates": [
+        {
+          "delta": {
+            "gemsDelta": 1000,
+            "goldDelta": 0,
+            "boosterDelta": [
+              {
+                "collationId": 100009,
+                "count": 2
+              },
+              {
+                "collationId": 100010,
+                "count": 2
+              },
+              {
+                "collationId": 100013,
+                "count": 2
+              },
+              {
+                "collationId": 100014,
+                "count": 2
+              },
+              {
+                "collationId": 100015,
+                "count": 2
+              }
+            ],
+            "cardsAdded": [],
+            "decksAdded": [],
+            "starterDecksAdded": [],
+            "vanityItemsAdded": [],
+            "vanityItemsRemoved": [],
+            "draftTokensDelta": 0,
+            "sealedTokensDelta": 0,
+            "vaultProgressDelta": 0,
+            "wcCommonDelta": 0,
+            "wcUncommonDelta": 0,
+            "wcRareDelta": 0,
+            "wcMythicDelta": 0,
+            "artSkinsAdded": [],
+            "artSkinsRemoved": [],
+            "voucherItemsDelta": []
+          },
+          "aetherizedCards": [],
+          "xpGained": 0,
+          "context": {
+            "source": "OpenChest",
+            "sourceId": "b7a9dd36-c8b2-4e50-8541-88fdf1003b23"
+          }
+        }
+      ]
+    }

@@ -1,0 +1,7 @@
+Rarity	NbMissing	MissingWeight	Set
+Mythic	4	1400	RIX
+Mythic	2	400	DOM
+RareNonLand	4	700	DOM
+Uncommon	1	26	GRN
+Common	6	34	GRN
+Common	1	5	XLN

@@ -1,0 +1,563 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>MTGAHelper deck</title>
+    <link rel="icon" type="image/png" href="/images/icon2.png" />
+    <link href="//cdn.jsdelivr.net/npm/keyrune@latest/css/keyrune.css" rel="stylesheet" type="text/css" />
+    <script src="js/submitCollection.js"></script>
+    <link rel="stylesheet" href="css/bulma-dark.min.css" />
+    <link rel="stylesheet" href="css/bulma-pageloader.min.css" />
+    <link rel="stylesheet" href="css/bulma-tooltip.min.css" />
+    <link rel="stylesheet" href="css/bulma-switch.min.css" />
+    <link rel="stylesheet" href="css/bulma-checkradio.min.css" />
+    <link rel="stylesheet" href="css/sparklist.css" />
+    <link rel="stylesheet" href="css/floating-icons.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
+
+    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>-->
+    <style>
+        /* Custom fonts */
+        /* THD &#xE961 */
+        /*@font-face {
+          font-family: 'Keyrune';
+          src: url('//cdn.jsdelivr.net/npm/keyrune@3.6.3/fonts/keyrune.eot');
+          src: url('//cdn.jsdelivr.net/npm/keyrune@3.6.3/fonts/keyrune.eot?#iefix') format('embedded-opentype'),
+            url('//cdn.jsdelivr.net/npm/keyrune@3.6.3/fonts/keyrune.woff2') format('woff2'),
+            url('//cdn.jsdelivr.net/npm/keyrune@3.6.3/fonts/keyrune.woff') format('woff'),
+            url('//cdn.jsdelivr.net/npm/keyrune@3.6.3/fonts/keyrune.ttf') format('truetype'),
+            url('//cdn.jsdelivr.net/npm/keyrune@3.6.3/fonts/keyrune.svg') format('svg');
+          font-weight: normal;
+          font-style: normal;
+        }*/
+
+        html {
+            background: url('/images/bg.jpg');
+        }
+
+            html.adjustBgPos {
+                background-position-y: 400px;
+            }
+
+        .modalTopLevel {
+            /* Above the page loader */
+            z-index: 2000000001 !important;
+        }
+
+        .cardFrame {
+            color: #000 !important;
+        }
+
+            .cardFrame td {
+                padding: 0 !important;
+            }
+
+                .cardFrame td div {
+                    padding: 0.2rem !important;
+                }
+
+        .footerLinks a {
+            margin-right: 2rem;
+        }
+
+        .pageloader {
+            background-image: url('/images/loadingBg.jpg');
+            background-color: #000;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            color: #FFF;
+        }
+
+        img.iconMana {
+            width: 1rem;
+            height: 1rem;
+            margin: 0 0.1rem;
+        }
+
+        img.iconManaHeading {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin: 0 0.1rem;
+        }
+
+        div.packInfo {
+            height: 20rem;
+        }
+
+        ul.noBullet li {
+            list-style-type: none;
+        }
+
+        ul.pagination-list {
+            margin: 0 !important;
+        }
+
+        div.MtgGoldfish h6, div.MtgGoldfish h6 a {
+            color: #f26739;
+        }
+
+        div.ChannelFireball h6, div.ChannelFireball h6 a {
+            color: #21898C;
+        }
+
+        div.MTGArenaZone h6 {
+            color: #BEBEBE;
+            text-shadow: 0px 0px 4px #000000;
+        }
+
+            div.MTGArenaZone h6 a {
+                color: #FFF;
+                text-shadow: none;
+                font-weight: normal;
+            }
+
+        div.CardGameBase h6, div.CardGameBase h6 a {
+            color: #81a0d6;
+        }
+
+        .is-hoverable {
+            cursor: pointer;
+        }
+
+        a.hyperlink {
+            text-decoration: underline;
+        }
+
+            a.hyperlink:hover {
+                text-decoration: none;
+            }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        img.wc {
+            position: relative;
+            top: 3px;
+            height: 1rem;
+        }
+
+        img.wcLarge {
+            position: relative;
+            top: 3px;
+            height: 1.25rem;
+        }
+
+        .masteryPassRewards img {
+            /*width:100%;*/
+            display: block !important;
+        }
+
+        .nowrap {
+            white-space: nowrap;
+        }
+
+        div.wrapper-tablescroll {
+            overflow: hidden;
+            overflow-y: scroll;
+            height: 600px;
+        }
+
+        .cardHover {
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            cursor: help;
+        }
+
+        .loot span {
+            margin-left: 1rem;
+        }
+
+        .content table td, .content table th, .table td, .table th {
+            border: none !important;
+        }
+
+        .darkTable h6 {
+            color: #eee !important;
+        }
+
+        table.darkTable {
+            background: none;
+        }
+
+            table.darkTable tbody td {
+                color: #eee !important;
+                border: none !important;
+                font-weight: bold !important;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+
+            table.darkTable thead th {
+                color: #eee !important;
+                border: none !important;
+            }
+
+            table.darkTable tfoot th {
+                color: #eee !important;
+                border: none !important;
+                background: #111;
+            }
+
+        tr.nohover:hover {
+            background: none !important;
+        }
+
+        .herobg1 {
+            background: url(/images/hero1-bg.jpg);
+            background-repeat: no-repeat;
+            background-color: transparent !important;
+        }
+
+        .hero2bg {
+            /*width: 200px;
+            height: 200px;
+            display: block;
+            position: relative;*/
+            background: url(/images/hero2-bg.png);
+            background-repeat: no-repeat;
+        }
+
+        /*.hero2bg::after {
+                content: "";
+                background: url(/images/hero2-bg.png);
+                opacity: 0.2;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                position: absolute;
+                z-index: -1;
+            }*/
+
+        ul.paginator {
+            display: inline;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .paginator a {
+            color: #999;
+        }
+
+        .paginator .current {
+            color: red;
+        }
+
+        .paginator li {
+            display: inline;
+            margin: 5px 5px;
+        }
+
+        .paginator a.first::after {
+            content: '...'
+        }
+
+        .paginator a.last::before {
+            content: '...'
+        }
+
+        table.deck img {
+            vertical-align: middle;
+        }
+
+        table.deck h5 {
+            margin-bottom: 0;
+        }
+
+        table.deck td {
+            /*padding: 0 !important;*/
+            border: none !important;
+            vertical-align: middle !important;
+        }
+
+            table.deck td.spacer {
+                padding-top: 0.9rem !important;
+            }
+
+            table.deck td.wildcardsRequired {
+                padding: 0 .25rem !important;
+            }
+
+        #switchLandsPickAll + label::before, #switchLandsPickAll + label:before {
+            background: #209cee !important;
+        }
+
+        .horizontalItems {
+            position: relative;
+            width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+        }
+
+        .horizontalItem {
+            display: inline-block;
+        }
+
+        .ss-grad.ss-common.white-stroke {
+            -webkit-text-stroke: 0.01rem #DDD !important;
+            background: -webkit-gradient(linear, left top, right top, color-stop(1%, #000), color-stop(50%, #302b2c), color-stop(100%, #000));
+            background: -webkit-linear-gradient(left, #000 1%, #302b2c 50%, #000 100%);
+            -webkit-background-clip: text;
+        }
+    </style>
+</head>
+<body>
+    <div id="app" v-cloak>
+        <div v-if="modelDeckSelected !== null" class="content" style="margin-top:1rem;">
+            <h4 class="title is-4">
+                <a v-bind:href="modelDeckSelected.url" target="_blank">
+                    {{modelDeckSelected.name}}
+                </a>
+                <!--from
+                <a v-bind:href="dictScraperUrl[modelDeckSelected.scraperTypeId]" target="_blank">
+                    {{formatScraperKey(modelDeckSelected.scraperTypeId, true)}}
+                </a>-->
+                <span v-on:click="deckToShare = modelDeckSelected; showModalShareDeck = true; $nextTick(() => txtShareDeck.select());" style="cursor:pointer; margin-left:0.5rem;" class="tooltip" data-tooltip="Share this deck">
+                    <i class="fas fa-share-alt"></i>
+                </span>
+                <button class="button is-info is-hidden-touch" style="margin-left:0.5rem;" v-on:click="displayModalExportDeck(modelDeckSelected.mtgaImportFormat)">
+                    Export to Arena
+                </button>
+            </h4>
+            <div class="columns is-multiline">
+                <div class="column">
+                    <h4 class="title is-4" style="margin-bottom:0.5rem;">
+                        Main ({{displayTotalCards(modelDeckSelected.cardsMain)}} cards)
+                    </h4>
+                    <!--<table class="table is-narrow cardFrame">-->
+                    <table class="table is-fullwidth is-narrow deck">
+                        <tbody v-for="t in modelDeckSelected.cardsMain.groupBy('type')">
+                            <tr>
+                                <td class="spacer" colspan="2">
+                                    <h5 class="title is-5">
+                                        {{t.key}} ({{displayTotalCards(t.values)}})
+                                    </h5>
+                                </td>
+                            </tr>
+                            <tr v-for="c in t.values">
+                                <td v-on:mouseleave="showCard(null)" v-on:mouseover="showCard(c.imageCardUrl)">
+                                    <i style="padding:0 2rem 0 0;" v-bind:class="'ss ss-fw ss-grad ss ss-' + c.set.toLowerCase() + ' ss-' + c.rarity.toLowerCase()"></i>
+                                    <!--<div v-bind:style="'background-size:100% 100%;background-image:url(\'images/frame' + c.color[0] + '.jpg\');'">-->
+                                    <img width="24" height="24" v-bind:alt="c.name" v-bind:src="c.imageThumbnail" />
+                                    <span class="cardHover">
+                                        {{c.amount}}x {{c.name}}
+                                    </span>
+                                </td>
+                                <td>
+                                    <img v-for="mana in parseManaCost(c.manaCost)" v-bind:src="'/images/manaIcons/' + mana + '.png'" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="column">
+                    <div v-for="zone in modelDeckSelected.cardsNotMainByZone">
+                        <h4 class="title is-4" style="margin-bottom:0.5rem;">
+                            {{zone.key}} <span v-if="displayTotalCards(zone.value) !== 1">({{displayTotalCards(zone.value)}} cards)</span>
+                        </h4>
+                        <p v-if="zone.value.length === 0">
+                            (No {{zone.key}})
+                        </p>
+                        <table v-else class="table is-fullwidth is-narrow deck">
+                            <tbody v-for="t in zone.value.groupBy('type')">
+                                <tr>
+                                    <td class="spacer" colspan="2">
+                                        <h5 class="title is-5">
+                                            {{t.key}} ({{displayTotalCards(t.values)}})
+                                        </h5>
+                                    </td>
+                                </tr>
+                                <tr v-for="c in t.values">
+                                    <td v-on:mouseleave="showCard(null)" v-on:mouseover="showCard(c.imageCardUrl)">
+                                        <i style="padding:0 2rem 0 0;" v-bind:class="'ss ss-fw ss-grad ss ss-' + c.set.toLowerCase() + ' ss-' + c.rarity.toLowerCase()"></i>
+                                        <img width="24" height="24" v-bind:alt="c.name" v-bind:src="c.imageThumbnail" />
+                                        <span v-on:mouseleave="showCard(null)" v-on:mouseover="showCard(c.imageCardUrl)" class="cardHover">
+                                            {{c.amount}}x {{c.name}}
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <img v-for="mana in parseManaCost(c.manaCost)" v-bind:src="'/images/manaIcons/' + mana + '.png'" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <hr />
+                    <div>
+                        <figure>
+                            <figcaption>Main deck mana curve<br />(Click for details)</figcaption>
+                            <ul class="sparklist">
+                                <li>
+                                    <span class="sparkline sparklineChart">
+                                        <span v-for="m in modelDeckSelected.manaCurve"
+                                              class="index tooltip is-tooltip-top"
+                                              v-on:click="showCardsForManaCurve(modelDeckSelected.cardsMain, m.manaCost)"
+                                              v-bind:data-tooltip="m.nbCards + ' cards costing ' + m.manaCost + ' mana' + (m.manaCost === 7 ? ' or more' : '')">
+                                            <span class="count" v-bind:class="m.manaCost === modelDeckSelectedManaCurveCostSelected ? 'selected' : ''"
+                                                  v-bind:style="'height:'+m.pctHeight+'%;'">{{m.nbCards}}</span>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="sparkline">
+                                        <span class="index">0</span>
+                                        <span class="index">1</span>
+                                        <span class="index">2</span>
+                                        <span class="index">3</span>
+                                        <span class="index">4</span>
+                                        <span class="index">5</span>
+                                        <span class="index">6</span>
+                                        <span class="index">7+</span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </figure>
+                        <div class="has-text-centered">
+                            <h5 class="title is-5" v-if="modelDeckSelectedManaCurveCostSelected !== -1">
+                                {{modelDeckSelectedCardsForManaCurve.reduce((a, b) => a + b.amount, 0)}} cards costing
+                                {{modelDeckSelectedManaCurveCostSelected}} mana
+                                <span v-if="modelDeckSelectedManaCurveCostSelected === 7">or more</span>
+                            </h5>
+                            <div class="columns is-multiline is-centered">
+                                <div v-for="c in modelDeckSelectedCardsForManaCurve" class="column has-text-centered" style="padding:0;">
+                                    {{c.amount}}x<br />
+                                    <span v-on:mouseleave="showCard(null)" v-on:mouseover="showCard(c.imageCardUrl)" class="cardHover">
+                                        <img v-bind:src="c.imageCardUrl" style="width:8rem;" />
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal" v-bind:class="showModalExportDeck ? 'is-active' : ''">
+                <div class="modal-background" v-on:click="showModalExportDeck = false"></div>
+                <div class="modal-content box" style="width:460px;">
+                    <h5 class="title is-5">
+                        Export deck to Magic Arena
+                    </h5>
+                    <textarea id="txtDeckExport" cols="50" rows="30">{{showModalExportDeckString}}</textarea>
+                </div>
+            </div>
+
+            <div id="divCardImg" v-if="modelCardSelectedUrl !== ''" style="position:absolute; top:0; left:0; width:244px; height:340px; background-color:transparent; z-index:1000000;">
+                <img v-bind:src="modelCardSelectedUrl" />
+            </div>
+        </div>
+    </div>
+
+    <script src="js/ajax.js"></script>
+    <script src="js/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script>
+        function getParameterByName(name) {
+            var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+            return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+        }
+
+        var app = new Vue({
+            el: '#app',
+            data: {
+                id: getParameterByName('id'),
+
+                modelDeckSelected: null,
+                modelDeckSelectedManaCurveCostSelected: -1,
+                modelDeckSelectedCardsForManaCurve: [],
+
+                modelCardSelectedUrl: '',
+                mouseX: 0,
+                mouseY: 0,
+
+                showModalExportDeck: false,
+                showModalExportDeckString: ''
+            },
+            mounted: function () {
+                this.getDeck();
+            },
+            methods: {
+                getDeck() {
+                    sendAjaxGet('/api/Decks/' + this.id, function (statuscode, body) {
+                        app.modelDeckSelected = JSON.parse(body).deck;
+                    });
+                },
+                displayTotalCards(cards) {
+                    var nb = 0;
+                    if (typeof (cards) !== 'undefined') {
+                        nb = cards.reduce((a, b) => a += b.amount, 0);
+                    }
+                    return nb;
+                },
+                parseManaCost(manaCost) {
+                    if (manaCost === null) return [];
+                    var matches = manaCost.match(/{([^}]+)}/g);
+                    if (matches === null) return [];
+                    return matches.map(i => i.replace('{', '').replace('}', '').replace('/', ''));
+                },
+                showCard(imageUrl) {
+                    if (imageUrl === null) {
+                        this.modelCardSelectedUrl = '';
+                    }
+                    else {
+                        this.modelCardSelectedUrl = imageUrl;//.startsWith('http') ? imageUrl : this.scryfallImagesPrefix + imageUrl;
+                        this.$nextTick(function () {
+                            var div = document.getElementById('divCardImg');
+                            var l = (app.mouseX - 333);
+                            if (l < 0) l += 500;
+                            if (div !== null) {
+                                div.style.left = l + 'px';
+                                div.style.top = (app.mouseY - 160) + 'px';
+                            }
+                        });
+                    }
+                },
+                showCardsForManaCurve(cardsMain, manaCost) {
+                    if (manaCost === this.modelDeckSelectedManaCurveCostSelected) {
+                        this.modelDeckSelectedCardsForManaCurve = [];
+                        this.modelDeckSelectedManaCurveCostSelected = -1;
+                        return;
+                    }
+
+                    this.modelDeckSelectedManaCurveCostSelected = manaCost;
+                    this.modelDeckSelectedCardsForManaCurve = cardsMain
+                        .filter(c => (manaCost < 7 ? c.cmc === manaCost : c.cmc >= manaCost) && c.type.indexOf('Land') === -1);
+                },
+                displayModalExportDeck(deckToExport) {
+                    this.showModalExportDeckString = deckToExport;
+                    this.showModalExportDeck = true;
+                    document.getElementById('txtDeckExport').focus();
+                    setTimeout(function () { document.getElementById('txtDeckExport').select(); }, 100);
+                }
+            }
+        });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137512649-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-137512649-1');
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.Event) {
+                document.captureEvents(Event.MOUSEMOVE);
+            }
+            document.onmousemove = getCursorXY;
+        });
+
+        function getCursorXY(e) {
+            var x = (window.Event) ? e.pageX : event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
+            var y = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+            app.mouseX = x;
+            app.mouseY = y;
+        }
+    </script>
+</body>
+</html>

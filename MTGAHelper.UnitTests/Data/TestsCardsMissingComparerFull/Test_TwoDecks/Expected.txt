@@ -1,0 +1,15 @@
+﻿Code	Priority	NbMissing
+C_FullAPartialB	5	1
+U_FullAFullB_SameQty	0	0
+U_FullAFullB	0	0
+R_PartialAPartialB_SameQty	400	2
+R_PartialAPartialB	300	2
+M_NoneANoneB_SameQty	400	1
+M_NoneANoneB	1000	3
+M_FullAPartialB(S)	400	2
+R_FullAFullB_SameQty(S)	0	0
+U_FullAFullB(S)	0	0
+U_PartialAPartialB_SameQty(S)	26	1
+C_PartialAPartialB(S)	11	2
+C_NoneANoneB_SameQty(S)	6	1
+C_NoneANoneB(S)	17	3

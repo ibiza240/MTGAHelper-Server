@@ -1,0 +1,378 @@
+﻿<UserControl
+    x:Class="MTGAHelper.Tracker.WPF.Views.UserControls.Playing"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:helpers="clr-namespace:MTGAHelper.Tracker.WPF.Views.Helpers"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:uc="clr-namespace:MTGAHelper.Tracker.WPF.Views.UserControls"
+    xmlns:viewModels="clr-namespace:MTGAHelper.Tracker.WPF.ViewModels"
+    d:DataContext="{d:DesignInstance viewModels:MainWindowVM}"
+    mc:Ignorable="d">
+    <UserControl.Resources>
+        <!--  Converter  -->
+        <helpers:BoolToStringConverter
+            x:Key="HasPriorityConverter"
+            FalseValue="Regular"
+            TrueValue="Bold" />
+    </UserControl.Resources>
+
+    <!--  Content Grid  -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="26" />
+        </Grid.RowDefinitions>
+
+        <!--  Deck List Tabs  -->
+        <TabControl
+            Grid.Row="0"
+            SelectedIndex="{Binding PlayingSelectedTabIndex}"
+            Background="Transparent"
+            BorderThickness="0,0,0,0"
+            TabStripPlacement="Left">
+            <TabControl.Resources>
+                <Style BasedOn="{StaticResource CardListTabsVertical}" TargetType="{x:Type TabItem}" />
+            </TabControl.Resources>
+
+            <!--  Match Deck  -->
+            <TabItem Header="Library">
+                <TabItem.Content>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Border
+                            Margin="0,0,0,2"
+                            BorderBrush="{StaticResource HeaderBrush}"
+                            BorderThickness="0,0,0,2">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <!--  Cards Remaining in Library  -->
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="24"
+                                    FontWeight="Bold">
+                                    <StackPanel Orientation="Vertical">
+                                        <TextBlock TextTrimming="CharacterEllipsis">
+                                            <TextBlock.Text>
+                                                <MultiBinding StringFormat="Turn {0}{1}">
+                                                    <Binding Path="InMatchState.TurnNumber" />
+                                                    <Binding Path="InMatchState.OnThePlay" />
+                                                </MultiBinding>
+                                            </TextBlock.Text>
+                                        </TextBlock>
+                                        <TextBlock Text="{Binding InMatchState.LibraryCardsCount, StringFormat={}{0} cards in library}" TextTrimming="CharacterEllipsis" />
+                                    </StackPanel>
+                                </Label>
+                                <!--  Lands Remaining and Percent to Draw  -->
+                                <Button
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    Padding="5,0"
+                                    Background="Black"
+                                    Command="{Binding InMatchState.ShowHideLandsCommand}"
+                                    ToolTipService.ShowDuration="10000">
+                                    <Button.ToolTip>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                            </Grid.RowDefinitions>
+                                            <Label Grid.Row="0">
+                                                <TextBlock Text="(click to show/hide lands in your library)" />
+                                            </Label>
+                                            <!--  Draw % by mana source -->
+                                            <ItemsControl
+                                                Grid.Row="1"
+                                                ItemsSource="{Binding InMatchState.LibraryDrawManaBySource}">
+                                                <ItemsControl.ItemsPanel>
+                                                    <ItemsPanelTemplate>
+                                                        <StackPanel Orientation="Vertical" />
+                                                    </ItemsPanelTemplate>
+                                                </ItemsControl.ItemsPanel>
+                                                <ItemsControl.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <Label>
+                                                                <TextBlock Text="{Binding Value.Info}" />
+                                                            </Label>
+                                                            <Image
+                                                                Width="14"
+                                                                Height="14"
+                                                                Source="{Binding Key, Converter={StaticResource StringToImage}, ConverterParameter=https://www.mtgahelper.com/images/manaIcons/{0}.png}" />
+                                                            <Label>
+                                                                <TextBlock Text="{Binding Value.InfoIncludingSpellLands}" />
+                                                            </Label>
+                                                        </StackPanel>
+                                                    </DataTemplate>
+                                                </ItemsControl.ItemTemplate>
+                                            </ItemsControl>
+                                        </Grid>
+                                    </Button.ToolTip>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image
+                                            Width="28"
+                                            Margin="5"
+                                            Source="/Assets/Images/land.png" />
+                                        <Border>
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition />
+                                                    <RowDefinition />
+                                                </Grid.RowDefinitions>
+                                                <Label
+                                                    Grid.Row="0"
+                                                    Padding="0"
+                                                    HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center">
+                                                    <TextBlock
+                                                        FontWeight="Bold"
+                                                        Foreground="White"
+                                                        Text="{Binding InMatchState.LibraryLandCurrentAndTotal}" />
+                                                </Label>
+                                                <Label
+                                                    Grid.Row="1"
+                                                    Padding="0"
+                                                    HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center">
+                                                    <TextBlock Text="{Binding InMatchState.LibraryDrawLandPct, StringFormat=p1}" />
+                                                </Label>
+                                            </Grid>
+                                        </Border>
+                                    </StackPanel>
+                                </Button>
+                            </Grid>
+                        </Border>
+
+                        <!--  Card List with lands  -->
+                        <Grid Grid.Row="1" Visibility="{Binding InMatchState.ShowLands, Converter={StaticResource BoolToVis}}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <uc:SimpleCardsList
+                                x:Name="CardsMyLibrary"
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                DataContext="{Binding InMatchState.MyLibrary}" />
+                        </Grid>
+                        <!--  Card List without lands  -->
+                        <Grid Grid.Row="1" Visibility="{Binding InMatchState.ShowLands, Converter={StaticResource BoolToVisInverse}}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <uc:SimpleCardsList
+                                x:Name="CardsMyLibraryWithoutLands"
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                DataContext="{Binding InMatchState.MyLibraryWithoutLands}" />
+                        </Grid>
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+
+            <!--  Match Sideboard  -->
+            <TabItem Header="Sideboard">
+                <TabItem.Content>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Border
+                            Grid.Row="0"
+                            Margin="0,0,0,2"
+                            BorderBrush="{StaticResource HeaderBrush}"
+                            BorderThickness="0,0,0,1">
+                            <Label FontSize="16" FontWeight="Bold">
+                                <TextBlock Text="{Binding InMatchState.SideboardCardsCount, StringFormat={}{0} cards in sideboard}" TextTrimming="CharacterEllipsis" />
+                            </Label>
+                        </Border>
+                        <uc:SimpleCardsList
+                            x:Name="CardsMySideboard"
+                            Grid.Row="1"
+                            DataContext="{Binding InMatchState.MySideboard}" />
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+
+            <!--  Action Log  -->
+            <TabItem
+                Header="Log">
+                <TabItem.Content>
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <ItemsControl ItemsSource="{Binding InMatchState.ActionLog}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Vertical" />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Time}" />
+                                        <TextBlock Text="{Binding Text}" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+                </TabItem.Content>
+            </TabItem>
+
+            <!--  Opponent Deck Window Launcher  -->
+            <TabItem
+                x:Name="OpponentTab"
+                Header="Opponent Cards"
+                PreviewMouseLeftButtonDown="OpenOpponentCardsWindow">
+                <TabItem.Content>
+                    <TabControl
+                        SelectedIndex="{Binding PlayingOpponentSelectedTabIndex}"
+                        Background="Transparent"
+                        BorderThickness="0,0,0,0">
+                        <TabControl.Resources>
+                            <Style BasedOn="{StaticResource CardListTabsHorizontal}" TargetType="{x:Type TabItem}" />
+                        </TabControl.Resources>
+
+                        <!--  Card List  -->
+                        <TabItem>
+                            <TabItem.Header>
+                                <Label
+                                    Padding="0"
+                                    Margin="0"
+                                    Content="Cards" />
+                            </TabItem.Header>
+                            <TabItem.Content>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <Border
+                                        Grid.Row="0"
+                                        Margin="0,0,0,2"
+                                        BorderBrush="{StaticResource HeaderBrush}"
+                                        BorderThickness="0,0,0,1">
+                                        <Label FontSize="16" FontWeight="Bold">
+                                            <TextBlock Text="{Binding InMatchState.OpponentCardsSeenCount, StringFormat={}{0} opponent cards seen}" TextTrimming="CharacterEllipsis" />
+                                        </Label>
+                                    </Border>
+                                    <uc:SimpleCardsList
+                                        x:Name="CardsOpponent"
+                                        Grid.Row="1"
+                                        DataContext="{Binding InMatchState.OpponentCardsSeen}" />
+                                </Grid>
+                            </TabItem.Content>
+                        </TabItem>
+
+                        <!--  Deck urls  -->
+                        <TabItem>
+                            <TabItem.Header>
+                                <Label
+                                    Padding="0"
+                                    Margin="0"
+                                    Content="Possible deck"
+                                    MouseLeftButtonDown="TabItemLabel_RefreshPossibleDeck" />
+                            </TabItem.Header>
+                            <TabItem.Content>
+                                <ItemsControl ItemsSource="{Binding OpponentWindowVM.DecksUsingCards}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel />
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Margin="10,5" FontWeight="Bold">
+                                        <Hyperlink helpers:HyperlinkExtensions.IsExternal="true" NavigateUri="{Binding Url}">
+                                            <TextBlock FontSize="16" Text="{Binding Name}" />
+                                        </Hyperlink>
+                                    </TextBlock>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </TabItem.Content>
+                        </TabItem>
+                    </TabControl>
+                </TabItem.Content>
+            </TabItem>
+
+            <!--  All Opponent Cards Seen  -->
+            <TabItem
+                Header="Previous Games this Match">
+                <TabItem.Content>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Border
+                            Grid.Row="0"
+                            Margin="0,0,0,2"
+                            BorderBrush="{StaticResource HeaderBrush}"
+                            BorderThickness="0,0,0,1">
+                            <Label FontSize="16" FontWeight="Bold">
+                                <TextBlock Text="{Binding InMatchState.OpponentCardsPrevGamesCount, StringFormat={}{0} total cards seen}" TextTrimming="CharacterEllipsis" />
+                            </Label>
+                        </Border>
+                        <uc:SimpleCardsList
+                            x:Name="AllCardsOpponent"
+                            Grid.Row="1"
+                            DataContext="{Binding InMatchState.OpponentCardsPrevGames}" />
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+
+            <!--<TabItem Header="Stats">
+                <TabItem.Content>
+                    <Label FontSize="16" FontWeight="Bold">
+                        <TextBlock>Stats</TextBlock>
+                    </Label>
+                </TabItem.Content>
+            </TabItem>-->
+        </TabControl>
+
+        <!--  Priority Timer  -->
+        <Grid Grid.Row="1" Background="{StaticResource HeaderBrush}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label
+                Grid.Row="0"
+                Grid.Column="1"
+                HorizontalAlignment="Center"
+                FontWeight="Bold">
+                <TextBlock Text="Priority" TextTrimming="CharacterEllipsis" />
+            </Label>
+            <Label
+                Grid.Row="0"
+                Grid.Column="2"
+                FontWeight="{Binding InMatchState.TimerMe.HasPriority, Converter={StaticResource HasPriorityConverter}}">
+                <TextBlock Text="{Binding InMatchState.TimerMe.TimePlayed, StringFormat=You: {0}}" />
+            </Label>
+            <Button
+                Grid.Row="0"
+                Grid.Column="3"
+                Click="CopyOpponentNameToClipboard"
+                FontWeight="{Binding InMatchState.TimerOpponent.HasPriority, Converter={StaticResource HasPriorityConverter}}">
+                <Button.ToolTip>
+                    <ToolTip>
+                        <TextBlock Text="{Binding InMatchState.OpponentScreenName, StringFormat={}{0} (click to copy)}"></TextBlock>
+                    </ToolTip>
+                </Button.ToolTip>
+                <TextBlock Text="{Binding InMatchState.TimerOpponent.TimePlayed, StringFormat=Opponent: {0}}" />
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>

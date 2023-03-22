@@ -1,0 +1,7 @@
+Rarity	NbMissing	MissingWeight	Set
+RareNonLand	2	200	M19
+RareNonLand	1	100	GRN
+RareLand	11	0	GRN
+RareNonLand	3	3	XLN
+RareLand	3	0	XLN
+RareLand	3	0	DOM

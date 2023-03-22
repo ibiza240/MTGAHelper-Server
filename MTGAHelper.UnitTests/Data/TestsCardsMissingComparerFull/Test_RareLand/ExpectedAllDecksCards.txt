@@ -1,0 +1,15 @@
+﻿Set	CardName	Rarity	Type	Deck	NbMissingMain	NbMissingSideboard
+GRN	Chromatic Lantern	Rare	Artifact	DeckA	1	0
+XLN	Herald of Secret Streams	Rare	Creature — Merfolk Warrior	DeckA	0	1
+XLN	Kopala, Warden of Waves	Rare	Legendary Creature — Merfolk Wizard	DeckA	0	2
+GRN	Overgrown Tomb	Rare	Land — Swamp Forest	DeckA	2	0
+GRN	Overgrown Tomb	Rare	Land — Swamp Forest	DeckB	3	0
+XLN	Rootbound Crag	Rare	Land	DeckB	0	1
+GRN	Sacred Foundry	Rare	Land — Mountain Plains	DeckA	4	0
+GRN	Sacred Foundry	Rare	Land — Mountain Plains	DeckB	1	0
+DOM	Sulfur Falls	Rare	Land	DeckB	3	0
+XLN	Sunpetal Grove	Rare	Land	DeckA	0	2
+XLN	Sunpetal Grove	Rare	Land	DeckB	0	1
+GRN	Watery Grave	Rare	Land — Island Swamp	DeckA	0	2
+GRN	Watery Grave	Rare	Land — Island Swamp	DeckB	0	4
+M19	Windreader Sphinx	Rare	Creature — Sphinx	DeckA	2	0

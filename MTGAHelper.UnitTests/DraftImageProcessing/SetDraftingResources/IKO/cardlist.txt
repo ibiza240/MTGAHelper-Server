@@ -1,0 +1,275 @@
+Fight as One
+Flourishing Fox
+Garrison Cat
+Light of Hope
+Solid Footing
+Swallow Whole
+Checkpoint Officer
+Divine Arrow
+Drannith Healer
+Drannith Magistrate
+Maned Serval
+Pacifism
+Savai Sabertooth
+Valiant Rescuer
+Will of the All-Hunter
+Helica Glider
+Keensight Mentor
+Lavabrink Venturer
+Perimeter Sergeant
+Sanctuary Lockdown
+Snare Tactician
+Splendor Mare
+Spontaneous Flight
+Stormwild Capridor
+Blade Banish
+Cubwarden
+Daysquad Marshal
+Huntmaster Liger
+Luminous Broodmoth
+Mythos of Snapdax
+Vulpikeet
+Coordinated Charge
+Majestic Auricorn
+Patagia Tiger
+Imposing Vantasaur
+Aegis Turtle
+Anticipate
+Escape Protocol
+Essence Scatter
+Facet Reader
+Glimmerbell
+Hampering Snare
+Keep Safe
+Mystic Subdual
+Ominous Seas
+Pollywog Symbiote
+Startling Development
+Convolute
+Frost Lynx
+Neutralize
+Of One Mind
+Phase Dolphin
+Sea-Dasher Octopus
+Thieving Otter
+Wingspan Mentor
+Avian Oddity
+Capture Sphere
+Crystacean
+Gust of Wind
+Mythos of Illuna
+Reconnaissance Mission
+Dreamtail Heron
+Frostveil Ambush
+Pouncing Shoreshark
+Voracious Greatshark
+Boon of the Wish-Giver
+Shark Typhoon
+Wingfold Pteron
+Archipelagore
+Dead Weight
+Mutual Destruction
+Serrated Scorpion
+Whisper Squad
+Zagoth Mamba
+Boot Nipper
+Corpse Churn
+Durable Coilbug
+Easy Prey
+Heartless Act
+Unexpected Fangs
+Unlikely Aid
+Bastion of Remembrance
+Call of the Death-Dweller
+Duskfang Mentor
+Gloom Pangolin
+Grimdancer
+Hunted Nightmare
+Memory Leak
+Mythos of Nethroi
+Nightsquad Commando
+Suffocating Fumes
+Blood Curdle
+Bushmeat Poacher
+Dark Bargain
+Dirge Bat
+Extinction Event
+Insatiable Hemophage
+Lurking Deadeye
+Cavern Whisperer
+Unbreakable Bond
+Blitz Leech
+Chittering Harvester
+Void Beckoner
+Blazing Volley
+Blisterspit Gremlin
+Footfall Crater
+Heightened Reflexes
+Weaponize the Monsters
+Blitz of the Thunder-Raptor
+Cathartic Reunion
+Drannith Stinger
+Fire Prophecy
+Forbidden Friendship
+Go for Blood
+Raking Claws
+Shredded Sails
+Flame Spill
+Frenzied Raptor
+Frillscare Mentor
+Prickly Marmoset
+Reptilian Reflection
+Spelleater Wolverine
+Everquill Phoenix
+Ferocious Tigorilla
+Momentum Rumbler
+Mythos of Vadrok
+Porcuparrot
+Pyroceratops
+Rumbling Rockslide
+Tentative Connection
+Clash of Titans
+Cloudpiercer
+Lukka, Coppercoat Outcast
+Rooting Moloch
+Unpredictable Cyclone
+Lava Serpent
+Sanctuary Smasher
+Yidaro, Wandering Monster
+Adventurous Impulse
+Almighty Brushwagg
+Sudden Spinnerets
+Essence Symbiote
+Humble Naturalist
+Plummet
+Ram Through
+Survivors' Bond
+Wilt
+Barrier Breach
+Charge of the Forever-Beast
+Excavation Mole
+Fertilid
+Fully Grown
+Glowstone Recluse
+Hornbash Mentor
+Lead the Stampede
+Mosscoat Goriak
+Thwart the Enemy
+Bristling Boar
+Exuberant Wolfbear
+Gemrazer
+Migration Path
+Migratory Greathorn
+Mythos of Brokkos
+Auspicious Starrix
+Flycatcher Giraffid
+Monstrous Step
+Vivien, Monsters' Advocate
+Honey Mammoth
+Kogla, the Titan Ape
+Colossification
+Greater Sandwurm
+Titanoth Rex
+Ivy Elemental
+Tranquil Cove
+Skycat Sovereign
+Jubilant Skybonder
+Yorion, Sky Nomad
+Scoured Barrens
+Dire Tactics
+General's Enforcer
+General Kudro of Drannith
+Lurrus of the Dream-Den
+Necropanther
+Dismal Backwater
+Cunning Nightbonder
+Slitherwisp
+Gyruda, Doom of Depths
+Swiftwater Cliffs
+Sprite Dragon
+Lore Drakkis
+Lutri, the Spellchaser
+Rielle, the Everwise
+Channeled Force
+Bloodfell Caves
+Labyrinth Raptor
+Sonorous Howlbonder
+Obosh, the Preypiercer
+Jungle Hollow
+Chevill, Bane of Monsters
+Fiend Artisan
+Skull Prophet
+Boneyard Lurker
+Umori, the Collector
+Back for More
+Rugged Highlands
+Proud Wildbonder
+Jegantha, the Wellspring
+Quartzwood Crasher
+Zilortha, Strength Incarnate
+Wind-Scarred Crag
+Regal Leosaur
+Savai Thundermane
+Zirda, the Dawnwaker
+Winota, Joiner of Forces
+Zenith Flare
+Blossoming Sands
+Alert Heedbonder
+Kaheera, the Orphanguard
+Frondland Felidar
+Thornwood Falls
+Kinnan, Bonder Prodigy
+Primal Empathy
+Trumpeting Gnarr
+Parcelbeast
+Keruga, the Macrosage
+Savai Triome
+Savai Crystal
+Snapdax, Apex of the Hunt
+Offspring's Revenge
+Ruinous Ultimatum
+Ketria Triome
+Ketria Crystal
+Song of Creation
+Illuna, Apex of Wishes
+Genesis Ultimatum
+Indatha Triome
+Death's Oasis
+Indatha Crystal
+Nethroi, Apex of Death
+Eerie Ultimatum
+Raugrin Triome
+Raugrin Crystal
+Vadrok, Apex of Thunder
+Narset of the Ancient Way
+Whirlwind of Thought
+Inspired Ultimatum
+Zagoth Triome
+Zagoth Crystal
+Titans' Nest
+Brokkos, Apex of Forever
+Emergent Ultimatum
+Bonders' Enclave
+Evolving Wilds
+Mysterious Egg
+Springjaw Trap
+The Ozolith
+Sleeper Dart
+Crystalline Giant
+Farfinder
+Adaptive Shimmerer
+73121
+73122
+73123
+73124
+73125
+73126
+73127
+73128
+73129
+73130
+73131
+73132
+73133
+73134
+73135

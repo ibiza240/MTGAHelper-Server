@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://mtgahelper.com/</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=news</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=articles</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=meta</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=decks</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=my%2Finventory</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=my%2Fcollection</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=my%2Fmtgadecks</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=my%2Fhistory</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=my%2FstatsLimited</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=my%2FdraftRatings</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=my%2Fdecks</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=my%2Fsources</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=my%2FtrackedDecks</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=my%2FmissingCardsSummary</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=my%2FmissingCardsDetails</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=my%2FmasteryPass</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=my%2FdraftsBeforeBoosters</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=profile</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=lands</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=articles%2FSupporterPerks</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=news.url</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=getDeckUrl(iDeck)</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=modelDeckSelected.url</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=dictScraperUrl[modelDeckSelected.scraperTypeId]</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r='%2FmtgaDeckAnalysis.html</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=modelUserDeckSelected.url</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=dictScraperUrl[modelUserDeckSelected.scraperTypeId]</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mtgahelper.com/index.html?r=s.url</loc>
+  <lastmod>2022-07-09T17:03:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>

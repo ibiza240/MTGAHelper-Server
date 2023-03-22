@@ -1,0 +1,165 @@
+{
+
+  "context": "Booster.Open",
+
+  "updates": [
+
+    {
+
+      "delta": {
+
+        "gemsDelta": 0,
+
+        "goldDelta": 0,
+
+        "boosterDelta": [
+
+          {
+
+            "collationId": 100015,
+
+            "count": -1
+
+          }
+
+        ],
+
+        "cardsAdded": [
+
+          70391
+
+        ],
+
+        "decksAdded": [],
+
+        "starterDecksAdded": [],
+
+        "vanityItemsAdded": [],
+
+        "vanityItemsRemoved": [],
+
+        "draftTokensDelta": 0,
+
+        "sealedTokensDelta": 0,
+
+        "vaultProgressDelta": 1.0,
+
+        "wcCommonDelta": 1,
+
+        "wcUncommonDelta": 0,
+
+        "wcRareDelta": 0,
+
+        "wcMythicDelta": 0,
+
+        "artSkinsAdded": [],
+
+        "artSkinsRemoved": [],
+
+        "voucherItemsDelta": []
+
+      },
+
+      "aetherizedCards": [
+
+        {
+
+          "grpId": 70208,
+
+          "goldAwarded": 0,
+
+          "gemsAwarded": 0,
+
+          "set": ""
+
+        },
+
+        {
+
+          "grpId": 70283,
+
+          "goldAwarded": 0,
+
+          "gemsAwarded": 0,
+
+          "set": ""
+
+        },
+
+        {
+
+          "grpId": 70178,
+
+          "goldAwarded": 0,
+
+          "gemsAwarded": 0,
+
+          "set": ""
+
+        },
+
+        {
+
+          "grpId": 70219,
+
+          "goldAwarded": 0,
+
+          "gemsAwarded": 0,
+
+          "set": ""
+
+        },
+
+        {
+
+          "grpId": 70205,
+
+          "goldAwarded": 0,
+
+          "gemsAwarded": 0,
+
+          "set": ""
+
+        },
+
+        {
+
+          "grpId": 70270,
+
+          "goldAwarded": 0,
+
+          "gemsAwarded": 0,
+
+          "set": ""
+
+        },
+
+        {
+
+          "grpId": 70391,
+
+          "goldAwarded": 0,
+
+          "gemsAwarded": 0,
+
+          "set": ""
+
+        }
+
+      ],
+
+      "xpGained": 0,
+
+      "context": {
+
+        "source": "BoosterOpen",
+
+        "sourceId": "df60121a-ba7b-4e76-8340-c7b47ad153c8"
+
+      }
+
+    }
+
+  ]
+
+}

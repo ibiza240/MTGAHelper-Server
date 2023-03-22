@@ -18,6 +18,7 @@ mono_crash.*
 
 # Build results
 [Dd]ebug/
+[Dd]ebugWithServer/
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
@@ -348,3 +349,5 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+/MTGAHelper.Web.UI/Properties/ServiceDependencies/mtgahelper-app - Web Deploy

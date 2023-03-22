@@ -1,0 +1,1 @@
+﻿internal record ScryfallSetException(string code, string arena_code);

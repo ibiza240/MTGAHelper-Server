@@ -1,0 +1,3 @@
+Rarity	NbMissing	MissingWeight	Set
+Common	1	5	XLN
+RareNonLand	1	1	DOM

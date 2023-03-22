@@ -1,0 +1,167 @@
+{
+
+  "context": "Booster.Open",
+
+  "updates": [
+
+    {
+
+      "delta": {
+
+        "gemsDelta": 0,
+
+        "goldDelta": 0,
+
+        "boosterDelta": [
+
+          {
+
+            "collationId": 100015,
+
+            "count": -1
+
+          }
+
+        ],
+
+        "cardsAdded": [
+
+          70197,
+
+          70299
+
+        ],
+
+        "decksAdded": [],
+
+        "starterDecksAdded": [],
+
+        "vanityItemsAdded": [],
+
+        "vanityItemsRemoved": [],
+
+        "draftTokensDelta": 0,
+
+        "sealedTokensDelta": 0,
+
+        "vaultProgressDelta": 0.5,
+
+        "wcCommonDelta": 0,
+
+        "wcUncommonDelta": 2,
+
+        "wcRareDelta": 0,
+
+        "wcMythicDelta": 0,
+
+        "artSkinsAdded": [],
+
+        "artSkinsRemoved": [],
+
+        "voucherItemsDelta": []
+
+      },
+
+      "aetherizedCards": [
+
+        {
+
+          "grpId": 70367,
+
+          "goldAwarded": 0,
+
+          "gemsAwarded": 0,
+
+          "set": ""
+
+        },
+
+        {
+
+          "grpId": 70287,
+
+          "goldAwarded": 0,
+
+          "gemsAwarded": 0,
+
+          "set": ""
+
+        },
+
+        {
+
+          "grpId": 70390,
+
+          "goldAwarded": 0,
+
+          "gemsAwarded": 0,
+
+          "set": ""
+
+        },
+
+        {
+
+          "grpId": 70152,
+
+          "goldAwarded": 0,
+
+          "gemsAwarded": 0,
+
+          "set": ""
+
+        },
+
+        {
+
+          "grpId": 70371,
+
+          "goldAwarded": 0,
+
+          "gemsAwarded": 0,
+
+          "set": ""
+
+        },
+
+        {
+
+          "grpId": 70197,
+
+          "goldAwarded": 0,
+
+          "gemsAwarded": 0,
+
+          "set": ""
+
+        },
+
+        {
+
+          "grpId": 70299,
+
+          "goldAwarded": 0,
+
+          "gemsAwarded": 0,
+
+          "set": ""
+
+        }
+
+      ],
+
+      "xpGained": 0,
+
+      "context": {
+
+        "source": "BoosterOpen",
+
+        "sourceId": "3c7b7453-f566-471c-a876-fc3342dc74a7"
+
+      }
+
+    }
+
+  ]
+
+}

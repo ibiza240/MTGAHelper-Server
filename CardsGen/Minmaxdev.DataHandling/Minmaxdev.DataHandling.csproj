@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Minmaxdev.Cache.Common\Minmaxdev.Cache.Common.csproj" />
+    <ProjectReference Include="..\Minmaxdev.Cache.Memory\Minmaxdev.Cache.Memory.csproj" />
+    <ProjectReference Include="..\Minmaxdev.Data.Persistence.Common\Minmaxdev.Data.Persistence.Common.csproj" />
+    <ProjectReference Include="..\Minmaxdev.Data.Persistence.File\Minmaxdev.Data.Persistence.File.csproj" />
+  </ItemGroup>
+
+</Project>

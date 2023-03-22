@@ -1,0 +1,287 @@
+{
+  "SetsStandard": [
+    "one",
+    "bro",
+    "dmu",
+    "snc",
+    "neo",
+    "vow",
+    "mid"
+  ],
+  "SetsHistoric": [
+    "yone",
+    "ybro",
+    "ydmu",
+    "afr",
+    "stx",
+    "khm",
+    "znr",
+    "hbg",
+    "ysnc",
+    "yneo",
+    "ymid",
+    "j21",
+    "sta",
+    "klr",
+    "akr",
+    "m21",
+    "iko",
+    "thb",
+    "eld",
+    "jmp",
+    "m20",
+    "war",
+    "rna",
+    "grn",
+    "m19",
+    "dom",
+    "rix",
+    "xln"
+  ],
+  "SetsInfo": [
+    {
+      "Set": "yone",
+      "CardsPerSet": 30,
+      "PromoCardNumber": "0",
+      "PromoCardIsStyle": true,
+      "ArenaCollationId": 400031
+    },
+    {
+      "Set": "one",
+      "CardsPerSet": 271,
+      "PromoCardNumber": "0",
+      "PromoCardIsStyle": true,
+      "ArenaCollationId": 100031
+    },
+    {
+      "Set": "ybro",
+      "CardsPerSet": 30,
+      "PromoCardNumber": "0",
+      "PromoCardIsStyle": true,
+      "ArenaCollationId": 400030
+    },
+    {
+      "Set": "bro",
+      "CardsPerSet": 290,
+      "PromoCardNumber": "0",
+      "PromoCardIsStyle": true,
+      "ArenaCollationId": 100030
+    },
+    {
+      "Set": "ydmu",
+      "CardsPerSet": 30,
+      "PromoCardNumber": "0",
+      "PromoCardIsStyle": true,
+      "ArenaCollationId": 400029
+    },
+    {
+      "Set": "dmu",
+      "CardsPerSet": 280,
+      "PromoCardNumber": "0",
+      "PromoCardIsStyle": true,
+      "ArenaCollationId": 100029
+    },
+    {
+      "Set": "hbg",
+      "CardsPerSet": 250,
+      "PromoCardNumber": "0",
+      "PromoCardIsStyle": true,
+      "ArenaCollationId": 100029
+    },
+    {
+      "Set": "ysnc",
+      "CardsPerSet": 30,
+      "PromoCardNumber": "0",
+      "PromoCardIsStyle": true,
+      "ArenaCollationId": 400028
+    },
+    {
+      "Set": "snc",
+      "CardsPerSet": 281,
+      "PromoCardNumber": "0",
+      "PromoCardIsStyle": true,
+      "ArenaCollationId": 100028
+    },
+    {
+      "Set": "yneo",
+      "CardsPerSet": 30,
+      "PromoCardNumber": "0",
+      "PromoCardIsStyle": true,
+      "ArenaCollationId": 400027
+    },
+    {
+      "Set": "neo",
+      "CardsPerSet": 302,
+      "PromoCardNumber": "0",
+      "PromoCardIsStyle": true,
+      "ArenaCollationId": 100027
+    },
+    {
+      "Set": "ymid",
+      "CardsPerSet": 63,
+      "PromoCardNumber": "0",
+      "PromoCardIsStyle": true,
+      "ArenaCollationId": 400026
+    },
+    {
+      "Set": "vow",
+      "CardsPerSet": 277,
+      "PromoCardNumber": "403",
+      "PromoCardIsStyle": true,
+      "ArenaId": 100026
+    },
+    {
+      "Set": "mid",
+      "CardsPerSet": 277,
+      "PromoCardNumber": "385",
+      "PromoCardIsStyle": true,
+      "ArenaId": 100025
+    },
+    {
+      "Set": "afr",
+      "CardsPerSet": 281,
+      "PromoCardNumber": "396",
+      "PromoCardIsStyle": true,
+      "ArenaId": 100024
+    },
+    {
+      "Set": "stx",
+      "CardsPerSet": 275,
+      "PromoCardNumber": "376",
+      "PromoCardIsStyle": true,
+      "ArenaId": 100023
+    },
+    {
+      "Set": "sta",
+      "CardsPerSet": 63,
+      "PromoCardNumber": "0",
+      "PromoCardIsStyle": true,
+      "ArenaId": 100999
+    },
+    {
+      "Set": "khm",
+      "CardsPerSet": 285,
+      "PromoCardNumber": "399",
+      "PromoCardIsStyle": true,
+      "ArenaId": 100022
+    },
+    {
+      "Set": "klr",
+      "CardsPerSet": 301,
+      "PromoCardNumber": "302",
+      "PromoCardIsStyle": false,
+      "ArenaId": 100021
+    },
+    {
+      "Set": "znr",
+      "CardsPerSet": 280,
+      "PromoCardNumber": "385",
+      "PromoCardIsStyle": true,
+      "ArenaId": 100020
+    },
+    {
+      "Set": "akr",
+      "CardsPerSet": 338,
+      "PromoCardNumber": "339",
+      "PromoCardIsStyle": false,
+      "ArenaId": 100019
+    },
+    {
+      "Set": "m21",
+      "CardsPerSet": 274,
+      "PromoCardNumber": "278",
+      "PromoCardIsStyle": false,
+      "ArenaId": 100018
+    },
+    {
+      "Set": "jmp",
+      "CardsPerSet": 495,
+      "PromoCardNumber": "0",
+      "PromoCardIsStyle": false
+    },
+    {
+      "Set": "iko",
+      "CardsPerSet": 274,
+      "PromoCardNumber": "275",
+      "PromoCardIsStyle": false,
+      "ArenaId": 100017
+    },
+    {
+      "Set": "thb",
+      "CardsPerSet": 254,
+      "PromoCardNumber": "269",
+      "PromoCardIsStyle": false,
+      "ArenaId": 100016
+    },
+    {
+      "Set": "eld",
+      "CardsPerSet": 269,
+      "PromoCardNumber": "303",
+      "PromoCardIsStyle": false,
+      "ArenaId": 100015
+    },
+    {
+      "Set": "m20",
+      "CardsPerSet": 280,
+      "PromoCardNumber": "281",
+      "PromoCardIsStyle": false,
+      "ArenaId": 100014
+    },
+    {
+      "Set": "war",
+      "CardsPerSet": 264,
+      "PromoCardNumber": "275",
+      "PromoCardIsStyle": false,
+      "ArenaId": 100013
+    },
+    {
+      "Set": "rna",
+      "CardsPerSet": 259,
+      "PromoCardNumber": "273",
+      "PromoCardIsStyle": false,
+      "ArenaId": 100010
+    },
+    {
+      "Set": "grn",
+      "CardsPerSet": 259,
+      "PromoCardNumber": "273",
+      "PromoCardIsStyle": false,
+      "ArenaId": 100009
+    },
+    {
+      "Set": "m19",
+      "CardsPerSet": 280,
+      "PromoCardNumber": "306",
+      "PromoCardIsStyle": false,
+      "ArenaId": 100008
+    },
+    {
+      "Set": "dom",
+      "ArenaCode": "dar",
+      "CardsPerSet": 269,
+      "PromoCardNumber": "280",
+      "PromoCardIsStyle": false,
+      "ArenaId": 100007
+    },
+    {
+      "Set": "rix",
+      "CardsPerSet": 196,
+      "PromoCardNumber": "0",
+      "PromoCardIsStyle": false,
+      "ArenaId": 100006
+    },
+    {
+      "Set": "xln",
+      "CardsPerSet": 279,
+      "PromoCardNumber": "0",
+      "PromoCardIsStyle": false,
+      "ArenaId": 100005
+    },
+    {
+      "Set": "j21",
+      "CardsPerSet": 787,
+      "PromoCardNumber": "0",
+      "PromoCardIsStyle": false
+    }
+  ]
+}

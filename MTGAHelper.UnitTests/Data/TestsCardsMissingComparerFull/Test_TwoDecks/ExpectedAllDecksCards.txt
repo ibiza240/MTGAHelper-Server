@@ -1,0 +1,19 @@
+﻿Set	CardName	Rarity	Type	Deck	NbMissingMain	NbMissingSideboard
+XLN	Raptor Companion	Common	Creature — Dinosaur	DeckB	1	0
+RIX	Rekindling Phoenix	Mythic Rare	Creature — Phoenix	DeckA	2	0
+RIX	Rekindling Phoenix	Mythic Rare	Creature — Phoenix	DeckB	3	0
+DOM	Siege-Gang Commander	Rare	Creature — Goblin	DeckA	1	0
+DOM	Siege-Gang Commander	Rare	Creature — Goblin	DeckB	2	0
+GRN	Sunhome Stalwart	Uncommon	Creature — Human Soldier	DeckA	0	1
+GRN	Sunhome Stalwart	Uncommon	Creature — Human Soldier	DeckB	1	0
+GRN	Sworn Companions	Common	Sorcery	DeckA	0	1
+GRN	Sworn Companions	Common	Sorcery	DeckB	2	0
+GRN	Take Heart	Common	Instant	DeckA	0	1
+GRN	Take Heart	Common	Instant	DeckB	1	0
+GRN	Tenth District Guard	Common	Creature — Human Soldier	DeckA	0	2
+GRN	Tenth District Guard	Common	Creature — Human Soldier	DeckB	3	0
+DOM	The Antiquities War	Rare	Enchantment — Saga	DeckA	2	0
+DOM	The Antiquities War	Rare	Enchantment — Saga	DeckB	2	0
+RIX	Twilight Prophet	Mythic Rare	Creature — Vampire Cleric	DeckA	1	0
+RIX	Twilight Prophet	Mythic Rare	Creature — Vampire Cleric	DeckB	1	0
+DOM	Verix Bladewing	Mythic Rare	Legendary Creature — Dragon	DeckB	2	0

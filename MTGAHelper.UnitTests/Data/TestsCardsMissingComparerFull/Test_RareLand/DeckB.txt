@@ -1,0 +1,9 @@
+Code	Qty	IsSideboard
+RLandFullAFullB	3	false
+RLandFullAPartialB	4	false
+RLandPartialAPartialB	4	false
+RLandNoneANoneB	1	false
+RLandFullA(S)FullB(S)	3	true
+RLandFullA(S)PartialB(S)	4	true
+RLandPartialA(S)PartialB(S)	2	true
+RLandNoneA(S)NoneB(S)	4	true

@@ -1,0 +1,15 @@
+﻿Code	Priority	NbMissing
+RNonLandFullA	0	0
+RNonLandPartialA	100	1
+RNonLandNoneA	200	2
+RLandFullAFullB	0	0
+RLandFullAPartialB	0	3
+RLandPartialAPartialB	0	3
+RLandNoneANoneB	0	4
+RNonLandFullA(S)	0	0
+RNonLandPartialA(S)	1	1
+RNonLandNoneA(S)	2	2
+RLandFullA(S)FullB(S)	0	0
+RLandFullA(S)PartialB(S)	0	1
+RLandPartialA(S)PartialB(S)	0	2
+RLandNoneA(S)NoneB(S)	0	4

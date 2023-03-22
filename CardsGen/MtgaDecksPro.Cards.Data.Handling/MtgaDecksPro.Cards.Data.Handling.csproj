@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Configurations>Debug;Release;DebugWithAllDecks</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="27.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Linq.Async" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Minmaxdev.Cache.Common\Minmaxdev.Cache.Common.csproj" />
+    <ProjectReference Include="..\Minmaxdev.Cache.Memory\Minmaxdev.Cache.Memory.csproj" />
+    <ProjectReference Include="..\Minmaxdev.Data.Persistence.Common\Minmaxdev.Data.Persistence.Common.csproj" />
+    <ProjectReference Include="..\Minmaxdev.Data.Persistence.File\Minmaxdev.Data.Persistence.File.csproj" />
+    <ProjectReference Include="..\Minmaxdev.DataHandling\Minmaxdev.DataHandling.csproj" />
+    <ProjectReference Include="..\MtgaDecksPro.Cards.Entity\MtgaDecksPro.Cards.Entity.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,7 @@
+﻿Code	RealName
+CMainFull	Angel of the Dawn
+CMainNone	Kinjalli's Caller
+CMainOtherOwned1	Invoke the Divine
+UMainOtherOwned2	Aegis of the Heavens
+RSideboardFull	Kinjalli's Sunwing
+RSideboardNone	Daring Archaeologist

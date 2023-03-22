@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <Configurations>Debug;Release;DebugWithAllDecks</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="CsvHelper" Version="28.0.0" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.38" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="4.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Minmaxdev.Cache.Common\Minmaxdev.Cache.Common.csproj" />
+    <ProjectReference Include="..\Minmaxdev.DataHandling\Minmaxdev.DataHandling.csproj" />
+    <ProjectReference Include="..\MtgaDecksPro.Cards.BootstrapCardsBuilding\MtgaDecksPro.Cards.BootstrapCardsBuilding.csproj" />
+    <ProjectReference Include="..\MtgaDecksPro.Cards.Entity\MtgaDecksPro.Cards.Entity.csproj" />
+  </ItemGroup>
+
+</Project>

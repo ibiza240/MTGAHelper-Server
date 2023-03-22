@@ -1,0 +1,15 @@
+Code	Qty	IsSideboard
+RNonLandFullA	1	false
+RNonLandPartialA	3	false
+RNonLandNoneA	2	false
+RLandFullAFullB	3	false
+RLandFullAPartialB	1	false
+RLandPartialAPartialB	3	false
+RLandNoneANoneB	4	false
+RNonLandFullA(S)	1	true
+RNonLandPartialA(S)	4	true
+RNonLandNoneA(S)	2	true
+RLandFullA(S)FullB(S)	3	true
+RLandFullA(S)PartialB(S)	3	true
+RLandPartialA(S)PartialB(S)	3	true
+RLandNoneA(S)NoneB(S)	2	true

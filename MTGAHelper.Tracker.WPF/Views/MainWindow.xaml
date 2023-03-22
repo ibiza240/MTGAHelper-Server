@@ -1,0 +1,258 @@
+﻿<Window
+    x:Class="MTGAHelper.Tracker.WPF.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:gif="http://wpfanimatedgif.codeplex.com"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:tb="http://www.hardcodet.net/taskbar"
+    xmlns:uc="clr-namespace:MTGAHelper.Tracker.WPF.Views.UserControls"
+    xmlns:viewModels="clr-namespace:MTGAHelper.Tracker.WPF.ViewModels"
+    Title="MTGAHelper"
+    Width="{Binding WindowWidth, Mode=TwoWay}"
+    Height="{Binding WindowHeight, Mode=TwoWay}"
+    MinWidth="230"
+    MinHeight="72"
+    d:DataContext="{d:DesignInstance viewModels:MainWindowVM}"
+    AllowsTransparency="True"
+    Background="{StaticResource BackgroundBrush}"
+    BorderBrush="{StaticResource WindowBorderBrush}"
+    BorderThickness="1"
+    Closed="Window_Closed"
+    Left="{Binding PositionLeft, Mode=TwoWay}"
+    Loaded="Window_Loaded"
+    LocationChanged="Window_LocationChanged"
+    Opacity="{Binding WindowOpacity}"
+    ResizeMode="CanResizeWithGrip"
+    ShowInTaskbar="{Binding IsWindowVisible, Mode=OneWay}"
+    SizeChanged="Window_SizeChanged"
+    Top="{Binding PositionTop, Mode=TwoWay}"
+    Topmost="{Binding WindowTopmost, Mode=OneWay}"
+    Visibility="{Binding IsWindowVisible, Converter={StaticResource BoolToVis}, Mode=TwoWay}"
+    WindowStartupLocation="Manual"
+    WindowState="{Binding WindowState}"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <!--  Content Grid  -->
+    <Grid DockPanel.Dock="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!--  Top Status Bar  -->
+        <uc:StatusBarTop Grid.Row="0" MouseLeftButtonDown="StatusBarTop_OnMouseLeftButtonDown" />
+
+        <!--  Ready Page  -->
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.Style>
+                <Style TargetType="{x:Type Grid}">
+                    <Setter Property="Visibility" Value="Hidden" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Context}" Value="Home">
+                            <Setter Property="Visibility" Value="Visible" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Style>
+            <uc:Ready x:Name="ReadyControl" />
+        </Grid>
+
+        <!--  Welcome Page  -->
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.Style>
+                <Style TargetType="{x:Type Grid}">
+                    <Setter Property="Visibility" Value="Hidden" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Context}" Value="Welcome">
+                            <Setter Property="Visibility" Value="Visible" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Style>
+            <uc:Welcome x:Name="WelcomeControl" />
+        </Grid>
+
+        <!--  Drafting Page  -->
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.Style>
+                <Style TargetType="{x:Type Grid}">
+                    <Setter Property="Visibility" Value="Hidden" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Context}" Value="Drafting">
+                            <Setter Property="Visibility" Value="Visible" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Style>
+            <uc:Drafting x:Name="DraftingControl" />
+        </Grid>
+
+        <!--  Playing Page  -->
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.Style>
+                <Style TargetType="{x:Type Grid}">
+                    <Setter Property="Visibility" Value="Hidden" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Context}" Value="Playing">
+                            <Setter Property="Visibility" Value="Visible" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Style>
+            <uc:Playing x:Name="PlayingControl" />
+        </Grid>
+
+        <!--  Problem List  -->
+        <ItemsControl
+            Grid.Row="2"
+            Margin="10,0,10,0"
+            ItemsSource="{Binding ProblemsList}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Label>
+                        <TextBlock Foreground="Red" Text="{Binding .}" />
+                    </Label>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+        <!--  Opacity Slider  -->
+        <Slider
+            Grid.Row="3"
+            Background="{StaticResource BackgroundBrush}"
+            LargeChange="0.1"
+            Maximum="1"
+            Minimum="0.1"
+            Style="{StaticResource MyCustomStyleForSlider}"
+            Value="{Binding WindowOpacity}" />
+
+        <!--  Network Status Bar  -->
+        <StatusBar
+            Grid.Row="4"
+            Height="25"
+            Background="{StaticResource BackgroundBrush}">
+            <StatusBarItem>
+                <Image
+                    Width="24"
+                    VerticalAlignment="Center"
+                    gif:ImageBehavior.AnimatedSource="/Assets/Images/loading.gif"
+                    Visibility="{Binding IsWorking, Converter={StaticResource BoolToVis}}" />
+            </StatusBarItem>
+            <StatusBarItem>
+                <TextBlock VerticalAlignment="Center" Text="{Binding NetworkStatusString}" />
+            </StatusBarItem>
+        </StatusBar>
+
+        <!--  Taskbar Icon  -->
+        <tb:TaskbarIcon
+            x:Name="NotifyIcon"
+            Grid.Row="0"
+            IconSource="/Assets/Images/icon.ico"
+            LeftClickCommand="{Binding RestoreWindowCommand}">
+            <!--  Tooltip  -->
+            <tb:TaskbarIcon.TrayToolTip>
+                <Border
+                    Padding="5,2"
+                    Background="{StaticResource TooltipBackgroundBrush}"
+                    BorderBrush="{StaticResource WindowBorderBrush}"
+                    BorderThickness="2"
+                    CornerRadius="4"
+                    Opacity="0.9">
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Text="MTGAHelper" />
+                </Border>
+            </tb:TaskbarIcon.TrayToolTip>
+            <!--  Context Menu  -->
+            <tb:TaskbarIcon.ContextMenu>
+                <ContextMenu Style="{StaticResource NotifyContextStyle}">
+                    <!--  Show Tracker  -->
+                    <MenuItem Command="{Binding RestoreWindowCommand}" Header="_Show Tracker">
+                        <MenuItem.Icon>
+                            <Viewbox>
+                                <Rectangle
+                                    Width="40"
+                                    Height="40"
+                                    Margin="0,5"
+                                    Fill="White"
+                                    Stretch="Uniform">
+                                    <Rectangle.OpacityMask>
+                                        <VisualBrush Stretch="Uniform" Visual="{StaticResource EyeOpenPath}" />
+                                    </Rectangle.OpacityMask>
+                                </Rectangle>
+                            </Viewbox>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <!--  Go to website  -->
+                    <MenuItem Command="{Binding GoToWebsiteCommand}" Header="Go to _Website">
+                        <MenuItem.Icon>
+                            <Viewbox>
+                                <Rectangle
+                                    Width="40"
+                                    Height="40"
+                                    Margin="0,5"
+                                    Fill="White"
+                                    Stretch="Uniform">
+                                    <Rectangle.OpacityMask>
+                                        <VisualBrush Stretch="Uniform" Visual="{StaticResource WebPath}" />
+                                    </Rectangle.OpacityMask>
+                                </Rectangle>
+                            </Viewbox>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <!--  Reset Window  -->
+                    <MenuItem Command="{Binding ResetWindowsCommand}" Header="_Reset Window Location">
+                        <MenuItem.Icon>
+                            <Viewbox>
+                                <Rectangle
+                                    Width="40"
+                                    Height="40"
+                                    Margin="0,5"
+                                    Fill="White"
+                                    Stretch="Uniform">
+                                    <Rectangle.OpacityMask>
+                                        <VisualBrush Stretch="Uniform" Visual="{StaticResource RefreshPath}" />
+                                    </Rectangle.OpacityMask>
+                                </Rectangle>
+                            </Viewbox>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <!--  Exit Tracker  -->
+                    <MenuItem Command="{Binding ExitApplicationCommand}" Header="_Exit Tracker">
+                        <MenuItem.Icon>
+                            <Viewbox>
+                                <Rectangle
+                                    Width="40"
+                                    Height="40"
+                                    Margin="0,10"
+                                    Fill="White"
+                                    Stretch="Uniform">
+                                    <Rectangle.OpacityMask>
+                                        <VisualBrush Stretch="Uniform" Visual="{StaticResource ClosePath}" />
+                                    </Rectangle.OpacityMask>
+                                </Rectangle>
+                            </Viewbox>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </ContextMenu>
+            </tb:TaskbarIcon.ContextMenu>
+        </tb:TaskbarIcon>
+    </Grid>
+</Window>

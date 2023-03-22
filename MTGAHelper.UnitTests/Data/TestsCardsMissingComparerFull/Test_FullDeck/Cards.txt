@@ -1,0 +1,45 @@
+﻿Code	RealName
+CFull	Angel of the Dawn
+CFull+S	Kinjalli's Caller
+CFullS	Invoke the Divine
+CNone	Duress
+CNone+S	Healing Grace
+CNoneS	Divest
+CPartial	Cavalry Drillmaster
+CPartial_Full+SNone	Gideon's Reproach
+CPartial_Full+SPartial	Dub
+CPartialS	Excavation Elephant
+MFull	Ajani, Adversary of Tyrants
+MFull+S	Divine Visitation
+MFullS	Lyra Dawnbringer
+MNone	Doom Whisperer
+MNone+S	Trapjaw Tyrant
+MNoneS	Demonlord Belzenlok
+MPartial	Wakening Sun's Avatar
+MPartial_Full+SNone	Arclight Phoenix
+MPartial_Full+SPartial	Dream Eater
+MPartialS	Naru Meha, Master Wizard
+RFull	Kinjalli's Sunwing
+RFull+S	Daring Archaeologist
+RFullS	Legion's Landing
+RNone	Fall of the Thran
+RNone+S	Zetalpa, Primal Dawn
+RNoneS	Temple Altisaur
+RPartial	Priest of the Wakening Sun
+RPartial_Full+SNone	Admiral's Order
+RPartial_Full+SPartial	Find // Finality
+RPartialS	Mavren Fein, Dusk Apostle
+UFull	Aegis of the Heavens
+UFull+S	Inspiring Cleric
+UFullS	Emissary of Sunrise
+UNone	Pilfering Imp
+UNone+S	Necrotic Wound
+UNoneS	Imperial Aerosaur
+UPartial	Aethershield Artificer
+UPartial_Full+SNone	Lotleth Giant
+UPartial_Full+SPartial	Kraul Swarm
+UPartialS	Dauntless Bodyguard
+CNotUsed	Barging Sergeant
+UNotUsed	Book Devourer
+RNotUsed	Erratic Cyclops
+MNotUsed	Nullhide Ferox

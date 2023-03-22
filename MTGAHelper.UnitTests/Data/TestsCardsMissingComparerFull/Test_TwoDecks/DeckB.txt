@@ -1,0 +1,15 @@
+﻿Qty	Code	IsSideboard
+3	C_FullAPartialB	false
+1	U_FullAFullB_SameQty	false
+2	U_FullAFullB	false
+3	R_PartialAPartialB_SameQty	false
+3	R_PartialAPartialB	false
+1	M_NoneANoneB_SameQty	false
+3	M_NoneANoneB	false
+3	M_FullAPartialB(S)	false
+1	R_FullAFullB_SameQty(S)	false
+2	U_FullAFullB(S)	false
+3	U_PartialAPartialB_SameQty(S)	false
+3	C_PartialAPartialB(S)	false
+1	C_NoneANoneB_SameQty(S)	false
+3	C_NoneANoneB(S)	false

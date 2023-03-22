@@ -1,0 +1,16 @@
+﻿Code	RealName
+C_FullAPartialB	Raptor Companion
+U_FullAFullB	Skizzik
+U_FullAFullB_SameQty	Chemister's Insight
+R_PartialAPartialB_SameQty	The Antiquities War
+R_PartialAPartialB	Siege-Gang Commander
+M_NoneANoneB_SameQty	Twilight Prophet
+M_NoneANoneB	Rekindling Phoenix
+M_Unused	Jaya Ballard
+M_FullAPartialB(S)	Verix Bladewing
+R_FullAFullB_SameQty(S)	Marwyn, the Nurturer
+U_FullAFullB(S)	Roc Charger
+U_PartialAPartialB_SameQty(S)	Sunhome Stalwart
+C_PartialAPartialB(S)	Sworn Companions
+C_NoneANoneB_SameQty(S)	Take Heart
+C_NoneANoneB(S)	Tenth District Guard

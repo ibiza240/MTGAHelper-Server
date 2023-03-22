@@ -1,0 +1,3 @@
+﻿Set	CardName	Rarity	Type	Deck	NbMissingMain	NbMissingSideboard
+DOM	Daring Archaeologist	Rare	Creature — Human Artificer	DeckAverageArchetypeA	0	1
+XLN	Kinjalli's Caller	Common	Creature — Human Cleric	DeckAverageArchetypeA	1	0

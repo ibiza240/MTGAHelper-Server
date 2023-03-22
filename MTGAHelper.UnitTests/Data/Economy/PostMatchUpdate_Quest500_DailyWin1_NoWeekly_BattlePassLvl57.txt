@@ -1,0 +1,228 @@
+{
+      "questUpdate": [
+        {
+          "questId": "b36bbc38-11df-402e-b94c-b74c37a27e37",
+          "goal": 20,
+          "locKey": "Quests/Quest_Gruul_Scrapper",
+          "tileResourceId": "bf45a414-2414-4b34-bebd-8eba7f53957b",
+          "treasureResourceId": "36079065-ecdb-4cc4-a67e-37b1c3539070",
+          "questTrack": "Default",
+          "isNewQuest": false,
+          "endingProgress": 1,
+          "startingProgress": 1,
+          "canSwap": false,
+          "chestDescription": {
+            "image1": "ObjectiveReward_XPCoinLarge",
+            "image2": null,
+            "image3": null,
+            "prefab": "RewardPopup3DIcon_XPCoin",
+            "referenceId": null,
+            "headerLocKey": "MainNav/EventRewards/Gold_And_XP_Reward",
+            "descriptionLocKey": null,
+            "quantity": "500",
+            "locParams": {
+              "number1": 500,
+              "number2": 500,
+              "number3": 0
+            },
+            "availableDate": "0001-01-01T00:00:00Z"
+          },
+          "hoursWaitAfterComplete": 0
+        },
+        {
+          "questId": "84bb640d-58fd-40b3-84c6-b3cb989e493a",
+          "goal": 20,
+          "locKey": "Quests/Quest_Creature_Comforts",
+          "tileResourceId": "a9108c89-3714-427e-b44f-080a1f6d4378",
+          "treasureResourceId": "36079065-ecdb-4cc4-a67e-37b1c3539070",
+          "questTrack": "Default",
+          "isNewQuest": false,
+          "endingProgress": 20,
+          "startingProgress": 4,
+          "canSwap": false,
+          "chestDescription": {
+            "image1": "ObjectiveReward_XPCoinLarge",
+            "image2": null,
+            "image3": null,
+            "prefab": "RewardPopup3DIcon_XPCoin",
+            "referenceId": null,
+            "headerLocKey": "MainNav/EventRewards/Gold_And_XP_Reward",
+            "descriptionLocKey": null,
+            "quantity": "500",
+            "locParams": {
+              "number1": 500,
+              "number2": 500,
+              "number3": 0
+            },
+            "availableDate": "0001-01-01T00:00:00Z"
+          },
+          "hoursWaitAfterComplete": 0
+        },
+        {
+          "questId": "a4a06519-fd8a-422a-b20f-8fc7a175feef",
+          "goal": 20,
+          "locKey": "Quests/Quest_Azorius_Justiciar",
+          "tileResourceId": "8e7195b8-2571-4fab-924b-f900f24c9de5",
+          "treasureResourceId": "36079065-ecdb-4cc4-a67e-37b1c3539070",
+          "questTrack": "Default",
+          "isNewQuest": false,
+          "endingProgress": 0,
+          "startingProgress": 0,
+          "canSwap": false,
+          "chestDescription": {
+            "image1": "ObjectiveReward_XPCoinLarge",
+            "image2": null,
+            "image3": null,
+            "prefab": "RewardPopup3DIcon_XPCoin",
+            "referenceId": null,
+            "headerLocKey": "MainNav/EventRewards/Gold_And_XP_Reward",
+            "descriptionLocKey": null,
+            "quantity": "500",
+            "locParams": {
+              "number1": 500,
+              "number2": 500,
+              "number3": 0
+            },
+            "availableDate": "0001-01-01T00:00:00Z"
+          },
+          "hoursWaitAfterComplete": 0
+        }
+      ],
+      "dailyWinUpdates": [
+        {
+          "delta": {
+            "gemsDelta": 0,
+            "goldDelta": 250,
+            "boosterDelta": [],
+            "cardsAdded": [],
+            "decksAdded": [],
+            "starterDecksAdded": [],
+            "vanityItemsAdded": [],
+            "vanityItemsRemoved": [],
+            "draftTokensDelta": 0,
+            "sealedTokensDelta": 0,
+            "vaultProgressDelta": 0.0,
+            "wcCommonDelta": 0,
+            "wcUncommonDelta": 0,
+            "wcRareDelta": 0,
+            "wcMythicDelta": 0,
+            "artSkinsAdded": [],
+            "artSkinsRemoved": [],
+            "voucherItemsDelta": []
+          },
+          "aetherizedCards": [],
+          "xpGained": 25,
+          "context": {
+            "source": "DailyWins",
+            "sourceId": "1"
+          }
+        }
+      ],
+      "weeklyWinUpdates": [],
+      "eppUpdate": {
+        "trackName": "EarlyPlayerProgression",
+        "trackTier": 0,
+        "trackDiff": {
+          "currentLevel": 23,
+          "currentExp": 600,
+          "oldLevel": 23,
+          "oldExp": 600,
+          "inventoryUpdates": []
+        },
+        "rewardWebDiff": {
+          "currentUnlockedNodes": [ 0, 1, 2, 4, 3 ],
+          "currentAvailableNodes": [ 5, 6, 7, 8, 9 ],
+          "oldUnlockedNodes": [ 0, 1, 2, 4, 3 ],
+          "oldAvailableNodes": [ 5, 6, 7, 8, 9 ],
+          "inventoryUpdates": []
+        },
+        "orbCountDiff": {
+          "oldOrbCount": 0,
+          "currentOrbCount": 0
+        }
+      },
+      "battlePassUpdate": {
+        "trackName": "BattlePass_ELD",
+        "trackTier": 0,
+        "trackDiff": {
+          "currentLevel": 57,
+          "currentExp": 75,
+          "oldLevel": 56,
+          "oldExp": 550,
+          "inventoryUpdates": [
+            {
+              "delta": {
+                "gemsDelta": 0,
+                "goldDelta": 0,
+                "boosterDelta": [
+                  {
+                    "collationId": 100015,
+                    "count": 1
+                  }
+                ],
+                "cardsAdded": [],
+                "decksAdded": [],
+                "starterDecksAdded": [],
+                "vanityItemsAdded": [],
+                "vanityItemsRemoved": [],
+                "draftTokensDelta": 0,
+                "sealedTokensDelta": 0,
+                "vaultProgressDelta": 0.0,
+                "wcCommonDelta": 0,
+                "wcUncommonDelta": 0,
+                "wcRareDelta": 0,
+                "wcMythicDelta": 0,
+                "artSkinsAdded": [],
+                "artSkinsRemoved": [],
+                "voucherItemsDelta": []
+              },
+              "aetherizedCards": [],
+              "xpGained": 0,
+              "context": {
+                "source": "BattlePassLevelUp",
+                "sourceId": "BattlePass_ELD[0][56]"
+              }
+            },
+            {
+              "delta": {
+                "gemsDelta": 0,
+                "goldDelta": 500,
+                "boosterDelta": [],
+                "cardsAdded": [],
+                "decksAdded": [],
+                "starterDecksAdded": [],
+                "vanityItemsAdded": [],
+                "vanityItemsRemoved": [],
+                "draftTokensDelta": 0,
+                "sealedTokensDelta": 0,
+                "vaultProgressDelta": 0.0,
+                "wcCommonDelta": 0,
+                "wcUncommonDelta": 0,
+                "wcRareDelta": 0,
+                "wcMythicDelta": 0,
+                "artSkinsAdded": [],
+                "artSkinsRemoved": [],
+                "voucherItemsDelta": []
+              },
+              "aetherizedCards": [],
+              "xpGained": 0,
+              "context": {
+                "source": "BattlePassLevelUp",
+                "sourceId": "BattlePass_ELD[1][56]"
+              }
+            }
+          ]
+        },
+        "rewardWebDiff": {
+          "currentUnlockedNodes": [ 4, 3, 8, 13, 18, 23, 28, 9, 14, 19, 24, 29, 2, 7 ],
+          "currentAvailableNodes": [ 0, 1, 12 ],
+          "oldUnlockedNodes": [ 4, 3, 8, 13, 18, 23, 28, 9, 14, 19, 24, 29, 2, 7 ],
+          "oldAvailableNodes": [ 0, 1, 12 ],
+          "inventoryUpdates": []
+        },
+        "orbCountDiff": {
+          "oldOrbCount": 3,
+          "currentOrbCount": 3
+        }
+      }
+    }

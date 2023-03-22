@@ -1,0 +1,358 @@
+{
+  "Unknown": {
+    "BestOf": 1,
+    "Active": false,
+    "Sets": [
+      "Historic"
+    ],
+    "Banned": []
+  },
+  "Standard": {
+    "BestOf": 1,
+    "Active": true,
+    "Sets": [
+      "Standard"
+    ],
+    "Banned": [
+      "Omnath, Locus of Creation"
+    ]
+  },
+  "Traditional Standard": {
+    "BestOf": 3,
+    "Active": true,
+    "Sets": [
+      "Standard"
+    ],
+    "Banned": [
+      "Omnath, Locus of Creation"
+    ]
+  },
+  "Alchemy": {
+    "BestOf": 1,
+    "Active": true,
+    "Sets": [
+      "Alchemy"
+    ],
+    "Banned": [
+    ]
+  },
+  "Traditional Alchemy": {
+    "BestOf": 3,
+    "Active": true,
+    "Sets": [
+      "Alchemy"
+    ],
+    "Banned": []
+  },
+  "Historic": {
+    "BestOf": 1,
+    "Active": true,
+    "Sets": [
+      "Historic"
+    ],
+    "Banned": [
+      "Agent of Treachery",
+      "Brainstorm",
+      "Field of the Dead",
+      "Fires of Invention",
+      "Nexus of Fate",
+      "Oko, Thief of Crowns",
+      "Omnath, Locus of Creation",
+      "Once Upon a Time",
+      "Teferi, Time Raveler",
+      "Tibalt's Trickery",
+      "Thassa's Oracle",
+      "Uro, Titan of Nature's Wrath",
+      "Veil of Summer",
+      "Wilderness Reclamation",
+      "Winota, Joiner of Forces"
+    ],
+    "Suspended": [
+      "Memory Lapse"
+    ]
+  },
+  "Traditional Historic": {
+    "BestOf": 3,
+    "Active": true,
+    "Sets": [
+      "Historic"
+    ],
+    "Banned": [
+      "Agent of Treachery",
+      "Brainstorm",
+      "Field of the Dead",
+      "Fires of Invention",
+      "Nexus of Fate",
+      "Oko, Thief of Crowns",
+      "Omnath, Locus of Creation",
+      "Once Upon a Time",
+      "Teferi, Time Raveler",
+      "Tibalt's Trickery",
+      "Thassa's Oracle",
+      "Uro, Titan of Nature's Wrath",
+      "Veil of Summer",
+      "Wilderness Reclamation",
+      "Winota, Joiner of Forces"
+    ],
+    "Suspended": [
+      "Memory Lapse"
+    ]
+  },
+  "Brawl": {
+    "BestOf": 1,
+    "Active": true,
+    "Sets": [
+      "Standard"
+    ],
+    "Banned": [
+      "Sorcerous Spyglass",
+      "Oko, Thief of Crowns",
+      "Drannith Magistrate",
+      "Winota, Joiner of Forces",
+      "Lutri, the Spellchaser",
+      "Omnath, Locus of Creation",
+      "Runed Halo",
+      "Pithing Needle"
+    ]
+  },
+  "Historic Brawl": {
+    "BestOf": 1,
+    "Active": false,
+    "Sets": [
+      "Historic"
+    ],
+    "Banned": [
+      "Drannith Magistrate",
+      "Gideon's Intervention",
+      "Runed Halo",
+      "Nexus of Fate",
+      "Meddling Mage",
+      "Teferi, Time Raveler",
+      "Lutri, the Spellchaser",
+      "Winota, Joiner of Forces",
+      "Oko, Thief of Crowns",
+      "Golos, Tireless Pilgrim",
+      "Sorcerous Spyglass"
+    ]
+  },
+  "Singleton": {
+    "BestOf": 1,
+    "Active": true,
+    "Sets": [
+      "Standard"
+    ]
+  },
+  "Standard Artisan": {
+    "BestOf": 1,
+    "Active": true,
+    "Sets": [
+      "Standard"
+    ],
+    "Banned": [
+      "Persistent Petitioners",
+      "Cauldron Familiar",
+      "Cavalcade of Calamity",
+      "Gates Ablaze"
+    ]
+  },
+  "Historic Artisan": {
+    "BestOf": 1,
+    "Active": false,
+    "Sets": [
+      "Historic"
+    ],
+    "Banned": [
+      "Persistent Petitioners",
+      "Cauldron Familiar",
+      "Gates Ablaze",
+      "Veil of Summer",
+      "Wilderness Reclamation",
+      "Zenith Flare"
+    ]
+  },
+  "Standard Pauper": {
+    "BestOf": 1,
+    "Active": false,
+    "Sets": [
+      "Standard"
+    ],
+    "Banned": [
+      "Persistent Petitioners"
+    ]
+  },
+  "Historic Pauper": {
+    "BestOf": 1,
+    "Active": false,
+    "Sets": [
+      "Historic"
+    ],
+    "Banned": [
+      "Persistent Petitioners"
+    ]
+  },
+  "Standard Shakeup": {
+    "BestOf": 1,
+    "Active": false,
+    "Sets": [
+      "Standard"
+    ],
+    "Banned": [
+      "Felidar Retreat",
+      "Brazen Borrower",
+      "Bonecrusher Giant",
+      "Embercleave",
+      "Gilded Goose",
+      "Lotus Cobra",
+      "Scute Swarm",
+      "Questing Beast",
+      "Winota, Joiner of Forces",
+      "Ugin, the Spirit Dragon",
+      "Soaring Thought-Thief",
+      "Zenith Flare"
+    ]
+  },
+  "Historic Shakeup": {
+    "BestOf": 1,
+    "Active": false,
+    "Sets": [
+      "Historic"
+    ],
+    "Banned": [
+      "Agent of Treachery",
+      "Bonecrusher Giant",
+      "Cauldron Familiar",
+      "Collected Company",
+      "Embercleave",
+      "Field of the Dead",
+      "Fires of Invention",
+      "Kor Spiritdancer",
+      "Llanowar Elves",
+      "Lotus Cobra",
+      "Muxus, Goblin Grandee",
+      "Nexus of Fate",
+      "Oko, Thief of Crowns",
+      "Omnath, Locus of Creation",
+      "Once Upon a Time",
+      "Phyrexian Tower",
+      "Teferi, Time Raveler",
+      "Thoughtseize",
+      "Torrential Gearhulk",
+      "Ugin, the Spirit Dragon",
+      "Uro, Titan of Nature's Wrath",
+      "Veil of Summer",
+      "Wilderness Reclamation",
+      "Winota, Joiner of Forces",
+      "Wrath of God"
+    ]
+  },
+  "Ravnica Constructed": {
+    "BestOf": 1,
+    "Active": false,
+    "Obsolete": true,
+    "Sets": [
+      "GRN",
+      "RNA",
+      "WAR"
+    ],
+    "Banned": [
+      "Gates Ablaze"
+    ]
+  },
+  "Cascade": {
+    "BestOf": 1,
+    "Active": false,
+    "Sets": [
+      "Standard"
+    ],
+    "Banned": [
+      "Deafening Silence",
+      "Drannith Magistrate",
+      "Rule of Law",
+      "Fae of Wishes",
+      "Flaxen Intruder",
+      "Lavinia, Azorius Renegade",
+      "Teferi, Time Raveler",
+      "Lucky Clover"
+    ]
+  },
+  "Cascade Singleton": {
+    "Description": "Bring a 60-card Standard deck with only one copy of any card except basic lands. Your first spell each turn lets you cast a spell of lower cost out of your deck!",
+    "BestOf": 1,
+    "Active": false,
+    "Sets": [
+      "Standard"
+    ],
+    "Banned": [
+      "Archon of Emeria",
+      "Deafening Silence",
+      "Drannith Magistrate",
+      "Mangara, the Diplomat",
+      "Ghostly Pilferer",
+      "Cauldron Familiar",
+      "Fires of Invention",
+      "Flaxen Intruder",
+      "Once Upon a Time",
+      "Lutri, the Spellchaser",
+      "Oko, Thief of Crowns",
+      "Uro, Titan of Nature's Wrath",
+      "Escape to the Wilds",
+      "Omnath, Locus of Creation",
+      "Lucky Clover"
+    ]
+  },
+  "Super Standard": {
+    "Description": "Bring a 100-card Standard deck!",
+    "BestOf": 1,
+    "Active": false,
+    "Sets": [
+      "Standard"
+    ],
+    "Banned": [
+      "Cauldron Familiar",
+      "Fires of Invention",
+      "Once Upon a Time",
+      "Oko, Thief of Crowns",
+      "Uro, Titan of Nature's Wrath",
+      "Escape to the Wilds",
+      "Omnath, Locus of Creation",
+      "Lucky Clover"
+    ]
+  },
+  "Treasure Singleton": {
+    "Description": "Bring a Standard Singleton deck, and get ready for presents: you'll receive a Treasure token every turn!",
+    "BestOf": 1,
+    "Active": true,
+    "Sets": [
+      "Standard"
+    ],
+    "Banned": [
+      "Blood Aspirant",
+      "Cauldron Familiar",
+      "Escape to the Wilds",
+      "Fires of Invention",
+      "Gilded Assault Cart",
+      "Korvold, Fae-Cursed King",
+      "Lucky Clover",
+      "Lutri, the Spellchaser",
+      "Magda, Brazen Outlaw",
+      "Oko, Thief of Crowns",
+      "Omnath, Locus of Creation",
+      "Once Upon a Time",
+      "Shimmer Dragon",
+      "Uro, Titan of Nature's Wrath",
+      "Yasharn, Implacable Earth"
+    ]
+  },
+  "Standard 2022": {
+    "BestOf": 1,
+    "Active": true,
+    "Obsolete": false,
+    "Sets": [
+      "ZNR",
+      "KHM",
+      "STX",
+      "AFR"
+    ],
+    "Banned": []
+  }
+}

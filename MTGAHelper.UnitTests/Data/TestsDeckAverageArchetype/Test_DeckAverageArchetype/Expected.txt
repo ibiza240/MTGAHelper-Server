@@ -1,0 +1,5 @@
+﻿Code	Priority	NbMissing
+CMainFull	0	0
+CMainNone	5	1
+RSideboardFull	0	0
+RSideboardNone	1	1

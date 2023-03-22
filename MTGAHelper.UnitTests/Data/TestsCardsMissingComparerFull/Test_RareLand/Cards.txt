@@ -1,0 +1,16 @@
+﻿Code	RealName
+RNonLandFullA	Rite of Belzenlok
+RNonLandPartialA	Chromatic Lantern
+RNonLandNoneA	Windreader Sphinx
+RLandFullAFullB	Isolated Chapel
+RLandFullAPartialB	Sulfur Falls
+RLandPartialAPartialB	Overgrown Tomb
+RLandNoneANoneB	Sacred Foundry
+RNonLandFullA(S)	Death Baron
+RNonLandPartialA(S)	Herald of Secret Streams
+RNonLandNoneA(S)	Kopala, Warden of Waves
+RLandFullA(S)FullB(S)	Glacial Fortress
+RLandFullA(S)PartialB(S)	Rootbound Crag
+RLandPartialA(S)PartialB(S)	Sunpetal Grove
+RLandNoneA(S)NoneB(S)	Watery Grave
+RLandNotUsed	Steam Vents

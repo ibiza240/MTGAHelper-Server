@@ -1,0 +1,32 @@
+﻿<Application
+    x:Class="MTGAHelper.Tracker.WPF.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:helpers="clr-namespace:MTGAHelper.Tracker.WPF.Views.Helpers"
+    Exit="Application_Exit">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--  Style Dictionaries  -->
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/ResourceDicts/Theme.xaml" />
+                <ResourceDictionary Source="/ResourceDicts/IconPaths.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!--  Common Use Converters  -->
+            <helpers:BoolToStringConverter
+                x:Key="BoolToVis"
+                FalseValue="Collapsed"
+                TrueValue="Visible" />
+            <helpers:BoolToStringConverter
+                x:Key="BoolToVisHidden"
+                FalseValue="Hidden"
+                TrueValue="Visible" />
+            <helpers:BoolToStringConverter
+                x:Key="BoolToVisInverse"
+                FalseValue="Visible"
+                TrueValue="Collapsed" />
+            <helpers:StringFormatToImageSourceConverter
+                x:Key="StringToImage" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

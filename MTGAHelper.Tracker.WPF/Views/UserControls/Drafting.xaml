@@ -1,0 +1,258 @@
+﻿<UserControl
+    x:Class="MTGAHelper.Tracker.WPF.Views.UserControls.Drafting"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:helpers="clr-namespace:MTGAHelper.Tracker.WPF.Views.Helpers"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:MTGAHelper.Tracker.WPF.ViewModels"
+    d:DataContext="{d:DesignInstance viewModels:DraftingVM}"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    GotFocus="UserControl_GotFocus"
+    mc:Ignorable="d">
+    <UserControl.Resources>
+        <helpers:MissingCardsToColorScaleConverter x:Key="MissingCardsToColorScaleConverter" />
+        <helpers:IntToVisibilityConverter x:Key="IntToVisibilityConverter" Threshold="0" />
+        <helpers:RatingFloatToColorScaleConverter x:Key="RatingToColorConverter" />
+        <helpers:StringToValueConverter
+            x:Key="ShowWeightConverter"
+            WhenEqual="Hidden"
+            WhenNotEqual="Visible"
+            Value="0" />
+        <Style TargetType="Label">
+            <Setter Property="ToolTipService.InitialShowDelay" Value="50" />
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <!--  General Drafting Info  -->
+        <Grid
+            Grid.Row="0"
+            Height="30"
+            Visibility="{Binding ShowGlobalMTGAHelperSays, Converter={StaticResource BoolToVis}}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Orientation="Horizontal">
+                <!--  ComboBox for Pack and Pick  -->
+                <ComboBox
+                    x:Name="PxpxComboBox"
+                    Height="14"
+                    IsEnabled="false"
+                    ItemsSource="{Binding PxpxItems}"
+                    SelectedItem="{Binding PxpxItemSelected}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Label}" />
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>
+            <!--  Non-Wheeling Card List  -->
+            <Label
+                Grid.Column="1"
+                Padding="10,5,0,5"
+                VerticalAlignment="Center"
+                Cursor="Hand"
+                MouseLeftButtonUp="ShowHideCardsThatDidNotWheel_MouseLeftButtonUp"
+                Visibility="{Binding ShowLinkCardListThatDidNotWheel, Converter={StaticResource BoolToVis}}">
+                <TextBlock
+                    Foreground="Aquamarine"
+                    Text="{Binding CardsWheelingMessage}"
+                    TextDecorations="Underline"
+                    TextTrimming="CharacterEllipsis">
+                    <TextBlock.Style>
+                        <Style TargetType="TextBlock">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding ShowCardListThatDidNotWheel}" Value="True">
+                                    <Setter Property="FontWeight" Value="Bold" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+            </Label>
+            <!--  Wheeling Card Count  -->
+            <Label
+                Grid.Column="1"
+                Padding="10,5,0,5"
+                VerticalAlignment="Center"
+                Visibility="{Binding IsVisibleWhenCardsDidNotWheel, Converter={StaticResource BoolToVisInverse}}">
+                <TextBlock Text="{Binding CardsWheelingMessage}" TextTrimming="CharacterEllipsis" />
+            </Label>
+        </Grid>
+
+        <!--  Draft Choices  -->
+        <ListBox
+            x:Name="CardsListbox"
+            Grid.Row="1"
+            HorizontalContentAlignment="Stretch"
+            Background="{StaticResource BackgroundBrush}"
+            BorderBrush="{StaticResource ScrollBarBackground}"
+            BorderThickness="0"
+            Grid.IsSharedSizeScope="True"
+            IsTabStop="False"
+            ItemsSource="{Binding CardsDraft}"
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+            ScrollViewer.VerticalScrollBarVisibility="Auto"
+            SelectionMode="Single"
+            VirtualizingPanel.IsVirtualizing="False">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="{x:Type ListBoxItem}">
+                    <EventSetter Event="MouseEnter" Handler="CardRow_MouseEnter" />
+                    <EventSetter Event="MouseLeave" Handler="CardRow_MouseLeave" />
+                    <Setter Property="SnapsToDevicePixels" Value="True" />
+                    <Setter Property="Padding" Value="0,0,0,0" />
+                    <Setter Property="BorderBrush" Value="{StaticResource ScrollBarBackground}" />
+                    <Setter Property="Background" Value="{StaticResource BackgroundBrush}" />
+                    <Setter Property="BorderThickness" Value="0" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                <Border
+                                    x:Name="Bd"
+                                    Padding="{TemplateBinding Padding}"
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    SnapsToDevicePixels="true">
+                                    <ContentPresenter
+                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition
+                                Width="Auto"
+                                MinWidth="26"
+                                SharedSizeGroup="FourthColumn" />
+                            <ColumnDefinition
+                                Width="Auto"
+                                MinWidth="30"
+                                SharedSizeGroup="FifthColumn" />
+                        </Grid.ColumnDefinitions>
+                        <!--  Card Image  -->
+                        <Border
+                            Grid.Column="0"
+                            Margin="2"
+                            BorderThickness="2">
+                            <Border.BorderBrush>
+                                <LinearGradientBrush GradientStops="{Binding BorderGradient}" StartPoint="0,0" EndPoint="1,0" />
+                            </Border.BorderBrush>
+                            <Image
+                                Width="32"
+                                Height="32"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Source="{Binding ImageArtUrl, TargetNullValue='pack://application:,,,/Assets/Images/thumbnailUnknown.png'}"
+                                Stretch="UniformToFill" />
+                        </Border>
+                        <!--  Card Name And Converted Mana Cost  -->
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <!--  Card Name  -->
+                            <Label Grid.Row="0" Padding="5,4,0,0">
+                                <TextBlock Text="{Binding Name}" TextTrimming="CharacterEllipsis" />
+                            </Label>
+                            <!--  Converted Mana Cost Symbols  -->
+                            <ItemsControl
+                                Grid.Row="1"
+                                Padding="5,0,0,4"
+                                ItemsSource="{Binding CmcImages}">
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <StackPanel Orientation="Horizontal" />
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Image
+                                            Width="14"
+                                            Height="14"
+                                            Source="{Binding}" />
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </Grid>
+                        <!--  Cards in collection  -->
+                        <TextBlock
+                            Grid.Column="2"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Foreground="{Binding AmountInCollection, Converter={StaticResource MissingCardsToColorScaleConverter}}"
+                            Text="{Binding AmountInCollection, StringFormat={}{0} / 4}"
+                            ToolTip="Cards in Collection"
+                            Visibility="{Binding DataContext.ShowGlobalMTGAHelperSays, Converter={StaticResource BoolToVis}, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" />
+                        <!--  RareDraft and Tracking Info  -->
+                        <Grid Grid.Column="3" Visibility="{Binding DataContext.ShowGlobalMTGAHelperSays, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Converter={StaticResource BoolToVis}}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Border
+                                Grid.Row="0"
+                                Margin="3"
+                                ToolTipService.InitialShowDelay="50">
+                                <Border.ToolTip>
+                                    <TextBlock Text="Used in your tracked decks" />
+                                </Border.ToolTip>
+                                <Image
+                                    Width="12"
+                                    Source="/Assets/Images/star.png"
+                                    Visibility="{Binding Weight, Converter={StaticResource ShowWeightConverter}}" />
+                            </Border>
+                            <Border
+                                Grid.Row="1"
+                                Margin="3"
+                                ToolTipService.InitialShowDelay="50"
+                                Visibility="{Binding RareDraftPickEnum, Converter={StaticResource BoolToVis}}">
+                                <Border.ToolTip>
+                                    <TextBlock Text="RareDraft Choice" />
+                                </Border.ToolTip>
+                                <Image
+                                    Width="20"
+                                    Opacity="{Binding DataContext.RareDraftOpacity, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}"
+                                    Source="/Assets/Images/Treasure.png" />
+                            </Border>
+                        </Grid>
+                        <!--  Limited Rating  -->
+                        <Grid Grid.Column="4" Background="Black">
+                            <Label
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                FontSize="16">
+                                <TextBlock FontWeight="Bold" Text="{Binding RatingToDisplay}">
+                                    <TextBlock.Foreground>
+                                        <MultiBinding Converter="{StaticResource RatingToColorConverter}">
+                                            <Binding Path="RatingValue" />
+                                            <Binding Path="RatingScale" />
+                                        </MultiBinding>
+                                    </TextBlock.Foreground>
+                                </TextBlock>
+                            </Label>
+                        </Grid>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</UserControl>

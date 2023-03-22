@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Configurations>Debug;Release;DebugWithAllDecks</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="Serilog" Version="2.11.0-dev-01371" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Minmaxdev.Cache.Memory\Minmaxdev.Cache.Memory.csproj" />
+    <ProjectReference Include="..\Minmaxdev.Data.Persistence.Common\Minmaxdev.Data.Persistence.Common.csproj" />
+    <ProjectReference Include="..\Minmaxdev.Data.Persistence.File\Minmaxdev.Data.Persistence.File.csproj" />
+    <ProjectReference Include="..\MtgaDecksPro.Cards.Data.Handling\MtgaDecksPro.Cards.Data.Handling.csproj" />
+  </ItemGroup>
+
+</Project>

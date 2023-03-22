@@ -1,0 +1,29 @@
+﻿Set	CardName	Rarity	Type	Deck	NbMissingMain	NbMissingSideboard
+RIX	Admiral's Order	Rare	Instant	DeckA	0	1
+M19	Aethershield Artificer	Uncommon	Creature Dwarf Artificer	DeckA	2	0
+GRN	Arclight Phoenix	Mythic Rare	Creature Phoenix	DeckA	0	1
+M19	Cavalry Drillmaster	Common	Creature Human Knight	DeckA	2	0
+DOM	Dauntless Bodyguard	Uncommon	Creature Human Knight	DeckA	0	2
+DOM	Demonlord Belzenlok	Mythic Rare	Legendary Creature Elder Demon	DeckA	0	1
+DOM	Divest	Common	Sorcery	DeckA	0	1
+GRN	Doom Whisperer	Mythic Rare	Creature Nightmare Demon	DeckA	1	0
+GRN	Dream Eater	Mythic Rare	Creature Nightmare Sphinx	DeckA	0	1
+DOM	Dub	Common	Enchantment Aura	DeckA	0	1
+XLN	Duress	Common	Sorcery	DeckA	1	0
+DOM	Excavation Elephant	Common	Creature Elephant	DeckA	0	2
+DOM	Fall of the Thran	Rare	Enchantment Saga	DeckA	1	0
+GRN	Find // Finality	Rare	Sorcery	DeckA	0	1
+DOM	Gideon's Reproach	Common	Instant	DeckA	0	1
+DOM	Healing Grace	Common	Instant	DeckA	1	1
+XLN	Imperial Aerosaur	Uncommon	Creature Dinosaur	DeckA	0	1
+GRN	Kraul Swarm	Uncommon	Creature Insect Warrior	DeckA	0	1
+GRN	Lotleth Giant	Uncommon	Creature Zombie Giant	DeckA	0	1
+XLN	Mavren Fein, Dusk Apostle	Rare	Legendary Creature Vampire Cleric	DeckA	0	2
+DOM	Naru Meha, Master Wizard	Mythic Rare	Legendary Creature Human Wizard	DeckA	0	2
+GRN	Necrotic Wound	Uncommon	Instant	DeckA	1	1
+GRN	Pilfering Imp	Uncommon	Creature Imp	DeckA	1	0
+XLN	Priest of the Wakening Sun	Rare	Creature Human Cleric	DeckA	2	0
+RIX	Temple Altisaur	Rare	Creature Dinosaur	DeckA	0	1
+RIX	Trapjaw Tyrant	Mythic Rare	Creature Dinosaur	DeckA	1	1
+XLN	Wakening Sun's Avatar	Mythic Rare	Creature Dinosaur Avatar	DeckA	2	0
+RIX	Zetalpa, Primal Dawn	Rare	Legendary Creature Elder Dinosaur	DeckA	1	1

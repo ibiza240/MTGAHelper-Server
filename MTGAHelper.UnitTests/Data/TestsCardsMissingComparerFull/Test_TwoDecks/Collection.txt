@@ -1,0 +1,12 @@
+﻿Qty	Code
+2	C_FullAPartialB
+1	U_FullAFullB_SameQty
+3	U_FullAFullB
+1	R_PartialAPartialB_SameQty
+1	R_PartialAPartialB
+4	M_Unused
+1	M_FullAPartialB(S)
+1	R_FullAFullB_SameQty(S)
+2	U_FullAFullB(S)
+2	U_PartialAPartialB_SameQty(S)
+1	C_PartialAPartialB(S)

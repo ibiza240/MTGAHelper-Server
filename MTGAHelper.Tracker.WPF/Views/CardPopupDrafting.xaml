@@ -1,0 +1,182 @@
+﻿<Window
+    x:Class="MTGAHelper.Tracker.WPF.Views.CardPopupDrafting"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:helpers="clr-namespace:MTGAHelper.Tracker.WPF.Views.Helpers"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:MTGAHelper.Tracker.WPF.ViewModels"
+    Title="Card popup"
+    Width="320"
+    d:DataContext="{d:DesignInstance viewModels:DraftingCardPopupVM}"
+    Background="{StaticResource BackgroundBrush}"
+    BorderBrush="{StaticResource WindowBorderBrush}"
+    BorderThickness="1"
+    ResizeMode="NoResize"
+    ShowInTaskbar="False"
+    SizeToContent="Height"
+    Topmost="True"
+    WindowStyle="None"
+    Visibility="{Binding IsPopupVisible, Converter={StaticResource BoolToVisHidden}}"
+    mc:Ignorable="d"
+    MouseEnter="Window_MouseEnter"
+    MouseLeave="Window_MouseLeave">
+    <Window.Resources>
+        <helpers:IntToVisibilityConverter x:Key="IntToVisConverter" Threshold="0" />
+        <helpers:StringToValueConverter
+            x:Key="ShowWeightConverter"
+            WhenEqual="Collapsed"
+            WhenNotEqual="Visible"
+            Value="0" />
+        <helpers:MultiBooleanToVisibilityConverter x:Key="MultiBooleanToVisibilityConverter" />
+    </Window.Resources>
+    <StackPanel Margin="10">
+        <!-- Custom draft rating when available -->
+        <StackPanel Margin="0,0,0,10">
+            <!-- Header -->
+            <TextBlock
+                    Margin="0,0,0,5"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Text="You say"
+                    TextWrapping="WrapWithOverflow" />
+            <!-- Rating -->
+            <StackPanel>
+                <!--Visibility="{Binding ShowCustomRating, Converter={StaticResource BoolToVis}}"-->
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock
+                            Margin="0,5,0,0"
+                            FontWeight="Bold"
+                            Text="Limited Rating: " />
+                    <ComboBox
+                            ItemsSource="{Binding CustomRatings, Mode=OneWay}"
+                            SelectedItem="{Binding CustomRatingSelected}"
+                            SelectionChanged="ComboBox_SelectionChanged">
+                    </ComboBox>
+                </StackPanel>
+                <!-- More details when available -->
+                <Grid Width="290">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBox
+                            Grid.Column="1"
+                            KeyUp="TextBox_KeyUp"
+                            Margin="0,5,0,0"
+                            MinHeight="43"
+                            Text="{Binding CustomRatingDescription, UpdateSourceTrigger=PropertyChanged}"
+                            TextWrapping="WrapWithOverflow" />
+                </Grid>
+            </StackPanel>
+            <!--<StackPanel Visibility="{Binding ShowCustomRating, Converter={StaticResource BoolToVisInverse}}">
+                    <TextBlock
+                    Margin="0,5,0,0"
+                    FontWeight="Bold"
+                    Text="{Binding Card.CustomRatingValue, StringFormat='Limited Rating: {0}'}" />
+                    -->
+            <!-- More details when available -->
+            <!--
+                    <TextBlock
+                    Margin="0,5,0,0"
+                    Text="{Binding Card.CustomRatingDescription}"
+                    TextWrapping="WrapWithOverflow" />
+                </StackPanel>-->
+        </StackPanel>
+
+        <!-- Information from selected rating source and all other ratings when the option is checked -->
+        <ItemsControl x:Name="otherDraftRatings" ItemsSource="{Binding RatingsToShow}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Visibility="{Binding ShowRatingsSource, Converter={StaticResource BoolToVis}}" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <!-- Header -->
+                        <TextBlock
+                                    Margin="0,10,0,5"
+                                    FontSize="16"
+                                    FontWeight="Bold"
+                                    Text="{Binding RatingSource, StringFormat={}{0} says}"
+                                    TextWrapping="WrapWithOverflow" />
+                        <!-- Rating -->
+                        <TextBlock
+                                    Margin="0,5,0,0"
+                                    FontWeight="Bold"
+                                    Text="{Binding RatingValue, StringFormat='Limited Rating: {0}'}" />
+                        <!-- More details when available -->
+                        <TextBlock
+                                    Margin="0,5,0,0"
+                                    Text="{Binding Description}"
+                                    TextWrapping="WrapWithOverflow" />
+                        <!-- Top x common when available -->
+                        <TextBlock
+                                    Margin="0,5,0,10"
+                                    Foreground="White"
+                                    Visibility="{Binding TopCommonCard.Rank, Converter={StaticResource IntToVisConverter}}">
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="This card is the Top {0} common card in {1} for this set">
+                                    <Binding Path="Card.TopCommonCard.Rank" />
+                                    <Binding Path="Card.TopCommonCard.Name" />
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+        <!-- Information from collection -->
+        <StackPanel Margin="0,20,0,0" Visibility="{Binding ShowGlobalMTGAHelperSays, Converter={StaticResource BoolToVis}}">
+            <!-- Header -->
+            <TextBlock
+                    Margin="0,0,0,5"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Text="MTGAHelper says" />
+            <!-- You are missing X copies... -->
+            <TextBlock Margin="0,5,0,0" Text="{Binding Card.NbMissingString}">
+                <TextBlock.Visibility>
+                    <MultiBinding Converter="{StaticResource MultiBooleanToVisibilityConverter}">
+                        <Binding Path="Card.IsRequiredToShowNbMissing" />
+                        <Binding Path="ShowGlobalMTGAHelperSays" />
+                    </MultiBinding>
+                </TextBlock.Visibility>
+            </TextBlock>
+            <!-- Raredraft pick reason when available -->
+            <Grid Margin="0,10,0,0" Visibility="{Binding Card.RareDraftPickEnum, Converter={StaticResource BoolToVis}}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image
+                        Grid.Column="0"
+                        Width="20"
+                        Margin="0,0,4,0"
+                        Source="/Assets/Images/Treasure.png" />
+                <TextBlock
+                        Grid.Column="1"
+                        Text="{Binding Card.RareDraftPickReason}"
+                        TextWrapping="WrapWithOverflow" />
+            </Grid>
+            <!-- Card used in tracked decks info when available -->
+            <StackPanel
+                    Margin="4,10,4,0"
+                    HorizontalAlignment="Left"
+                    Orientation="Horizontal"
+                    Visibility="{Binding Card.Weight, Converter={StaticResource ShowWeightConverter}}">
+                <Image
+                        Width="12"
+                        Margin="0,0,8,0"
+                        Source="/Assets/Images/star.png" />
+                <StackPanel>
+                    <TextBlock Text="{Binding Card.NbDecksUsedInfo}" />
+                    <TextBlock Text="{Binding Card.Weight, StringFormat='This card has a weight of {0:#,###.#}'}" />
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <!-- Card image -->
+        <Image Height="420" Source="{Binding Card.ImageCardUrl, TargetNullValue='pack://application:,,,/Assets/Images/thumbnailUnknown.png'}" />
+    </StackPanel>
+</Window>

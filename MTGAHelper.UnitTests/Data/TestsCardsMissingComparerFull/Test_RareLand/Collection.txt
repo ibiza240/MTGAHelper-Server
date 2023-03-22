@@ -1,0 +1,12 @@
+﻿Code	Qty
+RNonLandFullA	1
+RNonLandPartialA	2
+RLandFullAFullB	3
+RLandFullAPartialB	1
+RLandPartialAPartialB	1
+RLandNotUsed	4
+RNonLandFullA(S)	1
+RNonLandPartialA(S)	3
+RLandFullA(S)FullB(S)	4
+RLandFullA(S)PartialB(S)	3
+RLandPartialA(S)PartialB(S)	1

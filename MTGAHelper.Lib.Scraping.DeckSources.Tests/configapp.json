@@ -1,0 +1,74 @@
+{
+  "FolderLogs": "../logs",
+  "FolderData": "../../../../data",
+  "FolderUserMessages": "../UserMessages",
+  "FolderInvalidZips": "../InvalidZips",
+  "FolderDlls": ".",
+
+  "CurrentSet": "ZNR",
+
+  "InfoBySet": {
+    "KLR": {
+      "NbCards": 301,
+      "Formats": [ "Historic" ]
+    },
+    "AKR": {
+      "NbCards": 338,
+      "Formats": [ "Historic" ]
+    },
+    "XLN": {
+      "NbCards": 279,
+      "Formats": [ "Historic" ]
+    },
+    "RIX": {
+      "NbCards": 196,
+      "Formats": [ "Historic" ]
+    },
+    "DOM": {
+      "NbCards": 269,
+      "Formats": [ "Historic" ]
+    },
+    "M19": {
+      "NbCards": 280,
+      "Formats": [ "Historic" ]
+    },
+    "GRN": {
+      "NbCards": 259,
+      "Formats": [ "Historic" ]
+    },
+    "RNA": {
+      "NbCards": 259,
+      "Formats": [ "Historic" ]
+    },
+    "WAR": {
+      "NbCards": 264,
+      "Formats": [ "Historic" ]
+    },
+    "M20": {
+      "NbCards": 280,
+      "Formats": [ "Historic" ]
+    },
+    "ELD": {
+      "NbCards": 269,
+      "Formats": [ "Historic", "Standard" ]
+    },
+    "THB": {
+      "NbCards": 254,
+      "Formats": [ "Historic", "Standard" ]
+    },
+    "IKO": {
+      "NbCards": 254,
+      "Formats": [ "Historic", "Standard" ]
+    },
+    "M21": {
+      "NbCards": 274,
+      "Formats": [ "Historic", "Standard" ]
+    },
+    "ZNR": {
+      "NbCards": 280,
+      "Formats": [ "Historic", "Standard" ]
+    }
+  },
+
+  "Changelog": []
+}
